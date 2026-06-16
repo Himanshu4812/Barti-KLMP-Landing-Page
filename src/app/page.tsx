@@ -37,8 +37,9 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { WhyThisMattersSection } from "@/components/why-this-matters-section";
 import { ProblemSection } from "@/components/problem-section";
-import { VisionSection } from "@/components/vision-section";
-import { ModulesSection } from "@/components/modules-section";
+import { ObjectivesSection } from "@/components/objectives-section";
+import { FeaturesSection } from "@/components/modules-section";
+import { WhyChooseSection } from "@/components/why-choose-section";
 import { DiscoverySection } from "@/components/discovery-section";
 import { BenefitsBartiSection } from "@/components/benefits-barti-section";
 import { StatsSection } from "@/components/stats-section";
@@ -52,8 +53,9 @@ export default function Home() {
       <Hero />
       <WhyThisMattersSection />
       <ProblemSection />
-      <VisionSection />
-      <ModulesSection />
+      <ObjectivesSection />
+      <FeaturesSection />
+      <WhyChooseSection />
       <DiscoverySection />
       <BenefitsBartiSection />
       <StatsSection />

@@ -1,9 +1,10 @@
 export const NAV_LINKS = [
   { label: "Home", href: "#" },
-  { label: "Journey", href: "#journey" },
-  { label: "Capabilities", href: "#capabilities" },
+  { label: "Objectives", href: "#objectives" },
+  { label: "Features", href: "#features" },
+  { label: "Why Choose", href: "#why-choose" },
   { label: "Discovery", href: "#discovery" },
-  { label: "Contact", href: "#cta" },
+  { label: "Join", href: "#cta" },
 ] as const;
 
 export const HERO = {
@@ -66,21 +67,80 @@ export const CHALLENGES = {
   ] as const,
 };
 
-export const VISION = {
-  stages: [
+export const OBJECTIVES = {
+  vision: "To create Maharashtra's most comprehensive digital knowledge management platform for Ambedkarite literature, social justice studies, constitutional studies and public knowledge resources.",
+  forBarti: [
+    "Digitize complete library operations",
+    "Maintain accurate inventory",
+    "Generate management reports",
+    "Track resource utilization",
+  ],
+  forReaders: [
+    "Discover books & search resources easily",
+    "Reserve books & track borrowing history",
+    "Receive smart notifications",
+    "Build personal reading profiles",
+  ],
+} as const;
+
+export const FEATURES_HIGHLIGHT = {
+  title: "Core Feature Highlights",
+  cards: [
     {
-      title: "Traditional Library",
-      description: "Physical cataloging, in-person access, manual operations",
+      title: "Barcode-Driven Cataloging",
+      description: "Scan ISBN barcode to auto-fetch book metadata and fill details instantly. Reduces manual entry errors and speeds up catalog creation."
     },
     {
-      title: "Digital Repository",
-      description: "Digitized collections, online access, automated workflows",
+      title: "QR-Based Issue & Return",
+      description: "Staff scan Member QR card and Book Barcode. System auto-updates inventory, calculates overdue days and marks return in real-time."
     },
     {
-      title: "Knowledge Intelligence",
-      description: "AI-powered discovery, personalized recommendations, smart insights",
+      title: "Smart Book Discovery",
+      description: "Public portal with advanced search by title, author, subject, language. Filters for Ambedkar literature, social justice, law, constitution and more."
     },
-  ] as const,
+    {
+      title: "Configurable Rules Engine",
+      description: "Set borrowing limits per member type (student, scholar, officer), custom fine amounts, and duration policies — all configurable by administrators."
+    },
+    {
+      title: "Digital Membership Cards",
+      description: "Unique QR-coded membership cards for each member, used seamlessly during all issue and return transactions at the library."
+    },
+    {
+      title: "Government-Grade Reporting",
+      description: "Generate monthly, quarterly and annual reports exportable to PDF and Excel for management, government submissions and audit purposes."
+    }
+  ] as const
+};
+
+export const WHY_CHOOSE = {
+  title: "Why Choose KLMP for BARTI?",
+  cards: [
+    {
+      title: "Built for Government Institutions",
+      description: "Designed to meet compliance, reporting and audit requirements of Maharashtra government bodies."
+    },
+    {
+      title: "Deep Focus on Ambedkarite Heritage",
+      description: "Specialized categories and metadata for Ambedkar literature, social justice, and constitutional studies."
+    },
+    {
+      title: "Flexible & Scalable",
+      description: "From a single library to a multi-branch network. Configurable rules engine adapts to any policy."
+    },
+    {
+      title: "Data-Driven Decisions",
+      description: "Actionable analytics help management identify gaps, popular resources and utilization trends."
+    },
+    {
+      title: "Future-Ready with AI",
+      description: "Phase 3 AI engine adds recommendation and conversational search capabilities."
+    },
+    {
+      title: "Inclusive Citizen Access",
+      description: "Public discovery portal allows any citizen, student or researcher to search and reserve books digitally."
+    }
+  ] as const
 };
 
 export const CAPABILITIES = {

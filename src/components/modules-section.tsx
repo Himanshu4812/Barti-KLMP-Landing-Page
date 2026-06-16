@@ -1,10 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { staggerContainer, cardItem } from "@/lib/animations";
-import { CAPABILITIES } from "@/lib/constants";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
+import { FEATURES_HIGHLIGHT } from "@/lib/constants";
 import { Container } from "@/components/container";
-import { Search, Sparkles, Folder, FileText, CheckCircle2, Server, Barcode, Database, Cpu } from "lucide-react";
+import { 
+  Search, 
+  Sparkles, 
+  Folder, 
+  FileText, 
+  Barcode, 
+  QrCode, 
+  Sliders, 
+  Contact,
+  ArrowRight,
+  Database,
+  Cpu,
+  LayoutGrid
+} from "lucide-react";
 
 // Mockup 1: Library Operations Dashboard Mockup (Cataloging & Inventory Tabs)
 function LibraryOperationsMockup() {
@@ -235,73 +249,159 @@ function AIIntelligenceMockup() {
   );
 }
 
-const mockups = [
-  LibraryOperationsMockup,
-  DigitalRepositoryMockup,
-  KnowledgeDiscoveryMockup,
-  AIIntelligenceMockup,
+// Icons mapping for the 6 core features
+const FEATURE_ICONS = [
+  Barcode,       // Barcode Cataloging
+  QrCode,        // QR-Based Issue & Return
+  Search,        // Smart Book Discovery
+  Sliders,       // Configurable Rules
+  Contact,       // Digital Membership Cards
+  FileText       // Government-Grade Reporting
 ];
 
-export function ModulesSection() {
+const MOCKUP_TABS = [
+  { id: "ops", label: "Library Operations", component: LibraryOperationsMockup, desc: "Barcode cataloging, real-time inventory adjustments, and loan processing dashboards." },
+  { id: "repo", label: "Digital Repository", component: DigitalRepositoryMockup, desc: "Online document preservation engine supporting upload, synchronization, and secure browsing." },
+  { id: "discovery", label: "Faceted Discovery", component: KnowledgeDiscoveryMockup, desc: "Faceted filtering across categories, author directories, and historic subject tags." },
+  { id: "ai", label: "AI Knowledge Assistant", component: AIIntelligenceMockup, desc: "Ask BARTI conversational engine retrieving contextually accurate excerpts from Ambedkarite volumes." }
+];
+
+export function FeaturesSection() {
+  const [activeTab, setActiveTab] = useState("ops");
+  const CurrentMockup = MOCKUP_TABS.find(t => t.id === activeTab)?.component || LibraryOperationsMockup;
+  const currentDesc = MOCKUP_TABS.find(t => t.id === activeTab)?.desc || "";
+
   return (
-    <section id="capabilities" className="bg-[#FAFAF8] py-16 md:py-20">
+    <section id="features" className="bg-[#F3F2EE] py-16 md:py-20 border-b border-[#E4E7EC]/40">
       <Container>
+        
         {/* Section Header */}
         <div className="text-left mb-12">
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block mb-3">
+            PLATFORM HIGHLIGHTS —
+          </span>
           <h2 className="section-heading-custom text-[#0B1F3A] leading-[1.1] tracking-tight">
-            Core Platform Capabilities
+            {FEATURES_HIGHLIGHT.title}
           </h2>
         </div>
 
-        {/* 4-column capabilities grid */}
+        {/* 6-column features grid */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-[1280px] mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1280px] mx-auto mb-16"
         >
-          {CAPABILITIES.cards.map((card, index) => {
-            const MockupComponent = mockups[index] || LibraryOperationsMockup;
+          {FEATURES_HIGHLIGHT.cards.map((card, index) => {
+            const IconComponent = FEATURE_ICONS[index] || Barcode;
 
             return (
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/60 rounded-[24px] p-6 shadow-[0_12px_30px_rgba(11,31,58,0.03)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.06)] transition-all duration-300 flex flex-col justify-between min-h-[420px] group"
+                className="bg-white border border-[#E4E7EC]/80 rounded-[24px] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#C89B3C]/20 transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
               >
-                {/* Upper block - Title and description */}
                 <div className="space-y-4">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-[#C89B3C] bg-[#C89B3C]/5 border border-[#C89B3C]/10 px-2 py-0.5 rounded">
-                    {card.label}
+                  <span className="w-10 h-10 rounded-xl bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[#0B1F3A] flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300">
+                    <IconComponent size={20} />
                   </span>
                   
-                  <h3 className="text-xl font-bold text-[#0B1F3A] tracking-tight pt-1">
-                    {card.title}
-                  </h3>
-                  
-                  <p className="text-xs text-[#5E6573] leading-relaxed">
-                    {card.description}
-                  </p>
-                  
-                  {/* Features list */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {card.features.slice(0, 3).map((feat) => (
-                      <span key={feat} className="px-2 py-0.5 bg-[#F3F2EE] text-[#5E6573] text-[9px] font-bold rounded uppercase tracking-wider">
-                        {feat}
-                      </span>
-                    ))}
+                  <div className="space-y-2">
+                    <h3 className="text-base font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs text-[#5E6573] leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
-                </div>
-
-                {/* Down block - Detailed Screenshot Mockup */}
-                <div className="mt-6 pt-2 border-t border-[#E4E7EC]/40 group-hover:border-[#C89B3C]/30 transition-colors duration-300">
-                  <MockupComponent />
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
+
+        {/* Premium System Preview Dashboard (Tabs-based Mockups showcase) */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-white border border-[#E4E7EC] rounded-[24px] p-6 md:p-8 shadow-[0_12px_30px_rgba(11,31,58,0.02)] w-full max-w-[1280px] mx-auto relative overflow-hidden"
+        >
+          {/* Accent strip */}
+          <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#0B1F3A]" />
+
+          <div className="flex flex-col lg:flex-row items-stretch gap-8 relative z-10">
+            {/* Left side: Navigation tabs & details */}
+            <div className="lg:w-[45%] flex flex-col justify-between space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-[#C89B3C] font-bold text-xs uppercase tracking-wider">
+                  <LayoutGrid size={16} />
+                  <span>Interactive Preview</span>
+                </div>
+                
+                <h3 className="text-xl md:text-2xl font-bold text-[#0B1F3A] tracking-tight leading-tight">
+                  Experience the Core Management Dashboard
+                </h3>
+                
+                <p className="text-xs text-[#5E6573] leading-relaxed">
+                  Toggle through the tabs below to preview the live interface layouts designed specifically for BARTI administrative officers and visiting scholars.
+                </p>
+              </div>
+
+              {/* Navigation button tabs */}
+              <div className="flex flex-col gap-2.5">
+                {MOCKUP_TABS.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`text-left px-4 py-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition-all duration-300 ${
+                      activeTab === tab.id
+                        ? "bg-[#0B1F3A] border-[#0B1F3A] text-white shadow-md"
+                        : "bg-[#FAFAF8] border-[#E4E7EC] text-[#4A515E] hover:bg-[#F3F2EE]"
+                    }`}
+                  >
+                    <span>{tab.label}</span>
+                    <ArrowRight size={14} className={activeTab === tab.id ? "opacity-100 translate-x-0 transition-all" : "opacity-0 -translate-x-2 transition-all"} />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Right side: Mockup Display Area with active animation */}
+            <div className="lg:w-[55%] flex flex-col justify-center bg-[#FAFAF8] border border-[#E4E7EC]/60 rounded-2xl p-6 relative min-h-[260px]">
+              <div className="absolute top-2 left-4 text-[8.5px] uppercase font-bold text-[#5E6573]/60 tracking-widest select-none">
+                Interface Preview
+              </div>
+              
+              <div className="space-y-4 pt-2">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <CurrentMockup />
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Subtext describing active preview */}
+                <motion.p
+                  key={`desc-${activeTab}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-[11px] text-[#5E6573] leading-relaxed text-center font-medium italic pt-1"
+                >
+                  {currentDesc}
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
       </Container>
     </section>
   );

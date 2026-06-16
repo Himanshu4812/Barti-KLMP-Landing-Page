@@ -5,14 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const NAV_LINKS = [
-  { label: "Platform", href: "#" },
-  { label: "Roadmap", href: "#journey" },
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "Discovery", href: "#discovery" },
-  { label: "Contact", href: "#cta" },
-] as const;
+import { NAV_LINKS } from "@/lib/constants";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
