@@ -300,7 +300,7 @@ export function FeaturesSection() {
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/80 rounded-[24px] p-6 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#C89B3C]/20 transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
+                className="bg-white border border-[#E4E7EC]/80  p-6 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#C89B3C]/20 transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
               >
                 <div className="space-y-4">
                   <span className="w-10 h-10 rounded-xl bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[#0B1F3A] flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300">
@@ -327,7 +327,7 @@ export function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-white border border-[#E4E7EC] rounded-[24px] p-6 md:p-8 shadow-[0_12px_30px_rgba(11,31,58,0.02)] w-full max-w-[1280px] mx-auto relative overflow-hidden"
+          className="bg-white border border-[#E4E7EC]  p-6 md:p-8 shadow-[0_12px_30px_rgba(11,31,58,0.02)] w-full max-w-[1280px] mx-auto relative overflow-hidden"
         >
           {/* Accent strip */}
           <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#0B1F3A]" />

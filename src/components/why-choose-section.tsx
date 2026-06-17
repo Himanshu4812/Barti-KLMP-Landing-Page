@@ -50,7 +50,7 @@ export function WhyChooseSection() {
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/80 rounded-[24px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.04)] hover:border-[#C89B3C]/20 transition-all duration-500 group flex flex-col justify-between min-h-[220px]"
+                className="bg-white border border-[#E4E7EC]/80  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.04)] hover:border-[#C89B3C]/20 transition-all duration-500 group flex flex-col justify-between min-h-[220px]"
               >
                 <div className="space-y-4">
                   {/* Icon Container */}

@@ -29,7 +29,7 @@ export function BenefitsBartiSection() {
               {/* Category 1 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F4F7FB] border border-[#DCE4F0] rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F4F7FB] border border-[#DCE4F0]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
               >
                 <span className="w-14 h-14 rounded-full bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                   <Landmark size={26} />
@@ -40,7 +40,7 @@ export function BenefitsBartiSection() {
               {/* Category 2 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#FDF6E2] border border-[#F5E6BE] rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#FDF6E2] border border-[#F5E6BE]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
               >
                 <span className="w-14 h-14 rounded-full bg-[#D97706]/10 text-[#D97706] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                   <GraduationCap size={26} />
@@ -51,7 +51,7 @@ export function BenefitsBartiSection() {
               {/* Category 3 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F0F8F6] border border-[#D1EBE5] rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F0F8F6] border border-[#D1EBE5]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
               >
                 <span className="w-14 h-14 rounded-full bg-[#0D9488]/10 text-[#0D9488] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                   <FileSearch size={26} />
@@ -62,7 +62,7 @@ export function BenefitsBartiSection() {
               {/* Category 4 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F8F5FC] border border-[#E8DEF5] rounded-2xl p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F8F5FC] border border-[#E8DEF5]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
               >
                 <span className="w-14 h-14 rounded-full bg-[#6D28D9]/10 text-[#6D28D9] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                   <Users size={26} />
@@ -79,7 +79,7 @@ export function BenefitsBartiSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:col-span-6 bg-white border border-[#E4E7EC]/80 rounded-[24px] p-8 lg:p-10 relative overflow-hidden min-h-[380px] shadow-[0_12px_30px_rgba(11,31,58,0.03)] flex flex-col justify-between"
+            className="lg:col-span-6 bg-white border border-[#E4E7EC]/80  p-8 lg:p-10 relative overflow-hidden min-h-[380px] shadow-[0_12px_30px_rgba(11,31,58,0.03)] flex flex-col justify-between"
           >
             
             {/* Background Line-Sketch overlay (Huge & Highly Visible) */}

@@ -24,7 +24,7 @@ export function ObjectivesSection() {
           {/* Left Column - Vision Statement Card */}
           <motion.div 
             variants={cardItem}
-            className="lg:col-span-5 flex flex-col justify-between bg-white border border-[#E4E7EC] rounded-[24px] p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] relative overflow-hidden group hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] transition-all duration-500"
+            className="lg:col-span-5 flex flex-col justify-between bg-white border border-[#E4E7EC]  p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.015)] relative overflow-hidden group hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] transition-all duration-500"
           >
             {/* Visual Gold Crest accent line */}
             <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#C89B3C]" />
@@ -63,7 +63,7 @@ export function ObjectivesSection() {
               {/* Card 1 - Objectives for BARTI */}
               <motion.div 
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC] rounded-[24px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0B1F3A]/20 transition-all duration-500 group"
+                className="bg-white border border-[#E4E7EC]  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0B1F3A]/20 transition-all duration-500 group"
               >
                 <div className="space-y-6">
                   {/* Icon Block */}
@@ -94,7 +94,7 @@ export function ObjectivesSection() {
               {/* Card 2 - Objectives for Readers */}
               <motion.div 
                 variants={cardItem}
-                className="bg-white border border-[#DCEBE8] rounded-[24px] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0D9488]/20 transition-all duration-500 group"
+                className="bg-white border border-[#DCEBE8]  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0D9488]/20 transition-all duration-500 group"
               >
                 <div className="space-y-6">
                   {/* Icon Block */}

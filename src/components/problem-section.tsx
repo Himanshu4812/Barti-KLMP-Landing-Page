@@ -28,7 +28,7 @@ export function ProblemSection() {
           {/* Card 1 - Operational */}
           <motion.div
             variants={cardItem}
-            className="bg-white border border-[#E4E7EC]/60 rounded-[24px] p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
+            className="bg-white border border-[#E4E7EC]/60  p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
           >
             <span className="w-14 h-14 rounded-2xl bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] flex items-center justify-center mb-6 shadow-sm">
               <ListChecks size={26} />
@@ -55,7 +55,7 @@ export function ProblemSection() {
           {/* Card 2 - Reader */}
           <motion.div
             variants={cardItem}
-            className="bg-white border border-[#E4E7EC]/60 rounded-[24px] p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
+            className="bg-white border border-[#E4E7EC]/60  p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
           >
             <span className="w-14 h-14 rounded-2xl bg-[#0D9488]/10 border border-[#0D9488]/20 text-[#0D9488] flex items-center justify-center mb-6 shadow-sm">
               <BookOpen size={26} />
@@ -82,7 +82,7 @@ export function ProblemSection() {
           {/* Card 3 - Management */}
           <motion.div
             variants={cardItem}
-            className="bg-white border border-[#E4E7EC]/60 rounded-[24px] p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
+            className="bg-white border border-[#E4E7EC]/60  p-8 shadow-[0_12px_30px_rgba(11,31,58,0.04)] hover:shadow-[0_20px_40px_rgba(11,31,58,0.08)] transition-all duration-500 flex flex-col items-start"
           >
             <span className="w-14 h-14 rounded-2xl bg-[#C89B3C]/10 border border-[#C89B3C]/20 text-[#C89B3C] flex items-center justify-center mb-6 shadow-sm">
               <BarChart3 size={26} />
