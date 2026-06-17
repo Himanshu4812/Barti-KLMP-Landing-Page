@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen w-full bg-[#FAFAF8] overflow-hidden pt-20">
+    <section className="relative min-h-[90vh] md:min-h-screen w-full bg-[#FAFAF8] overflow-hidden pt-[96px]">
       
       {/* Right Side - Cinematic Warm Library Background */}
       <div className="absolute top-0 right-0 w-full lg:w-[65%] h-full bg-[#FAFAF8] hidden lg:block pointer-events-none z-0">
@@ -33,7 +33,7 @@ export function Hero() {
       </div>
 
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 items-start max-w-[1400px] mx-auto py-10 lg:py-16">
+          <div className="flex flex-col lg:flex-row gap-12 items-start max-w-[1400px] mx-auto pb-10 lg:pb-16">
           
           {/* Left Column - Content */}
           <div className="w-full lg:w-[35%] flex flex-col justify-center space-y-8 pr-0 lg:pr-8 text-left">

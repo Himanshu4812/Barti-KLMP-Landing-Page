@@ -23,7 +23,7 @@ import {
 // Mockup 1: Library Operations Dashboard Mockup (Cataloging & Inventory Tabs)
 function LibraryOperationsMockup() {
   return (
-    <div className="bg-[#FAFAF8] border border-[#E4E7EC] rounded-xl text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col shadow-inner bg-white">
+    <div className="bg-[#FAFAF8] border border-[#E4E7EC] text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col shadow-inner bg-white">
       {/* Window Title Bar */}
       <div className="bg-[#0B1F3A] p-2 flex justify-between items-center text-white text-[8px] font-mono select-none">
         <div className="flex items-center gap-1.5">
@@ -85,7 +85,7 @@ function LibraryOperationsMockup() {
 // Mockup 2: Digital Repository File Explorer Mockup (Collections & Ingest Tabs)
 function DigitalRepositoryMockup() {
   return (
-    <div className="bg-[#FAFAF8] border border-[#E4E7EC] rounded-xl text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col shadow-inner bg-white">
+    <div className="bg-[#FAFAF8] border border-[#E4E7EC] text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col shadow-inner bg-white">
       {/* Window Title Bar */}
       <div className="bg-[#0D9488] p-2 flex justify-between items-center text-white text-[8px] font-mono select-none">
         <div className="flex items-center gap-1.5">
@@ -140,7 +140,7 @@ function DigitalRepositoryMockup() {
 // Mockup 3: Knowledge Discovery Faceted Search
 function KnowledgeDiscoveryMockup() {
   return (
-    <div className="bg-[#FAFAF8] border border-[#E4E7EC] rounded-xl text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col justify-between bg-white shadow-inner">
+    <div className="bg-[#FAFAF8] border border-[#E4E7EC] text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col justify-between bg-white shadow-inner">
       {/* Window Title Bar */}
       <div className="bg-[#C89B3C] p-2 flex justify-between items-center text-white text-[8px] font-mono select-none">
         <div className="flex items-center gap-1.5">
@@ -196,7 +196,7 @@ function KnowledgeDiscoveryMockup() {
 // Mockup 4: AI Intelligence Chat Box
 function AIIntelligenceMockup() {
   return (
-    <div className="bg-[#FAFAF8] border border-[#E4E7EC] rounded-xl text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col justify-between bg-white shadow-inner">
+    <div className="bg-[#FAFAF8] border border-[#E4E7EC] text-[9px] font-sans text-[#0B1F3A] h-48 overflow-hidden flex flex-col justify-between bg-white shadow-inner">
       {/* Window Title Bar */}
       <div className="bg-[#6D28D9] p-2 flex justify-between items-center text-white text-[8px] font-mono select-none">
         <div className="flex items-center gap-1.5">

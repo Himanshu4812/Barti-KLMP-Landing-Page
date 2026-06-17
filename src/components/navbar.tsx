@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -12,9 +13,16 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
     window.history.scrollRestoration = "manual";
   }, []);
+
+  const pathname = usePathname();
+  useEffect(() => {
+    if (pathname === "/") {
+      document.documentElement.scrollTop = 0;
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,7 +45,7 @@ export function Navbar() {
       <div className="mx-auto max-w-[1440px] px-4 md:px-8">
         <nav className="flex items-center justify-between h-20 w-full max-w-[1280px] mx-auto">
           {/* Logo Brand Area */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" onClick={() => document.documentElement.scrollTop = 0} className="flex items-center gap-3 group">
             {/* Detailed Circular Golden Crest SVG representing BARTI logo */}
             <div className="relative w-12 h-12 flex-shrink-0">
               <svg viewBox="0 0 100 100" className="w-full h-full text-[#C89B3C]">

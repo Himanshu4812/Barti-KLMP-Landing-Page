@@ -49,8 +49,8 @@ export function ImageAutoSlider({ images = defaultImages, className }: ImageAuto
       `}</style>
 
       <div className={className}>
-        <div className="w-full">
-          <div className="infinite-scroll flex gap-5 md:gap-6 w-max py-2">
+          <div className="w-full overflow-hidden">
+            <div className="infinite-scroll flex gap-5 md:gap-6 w-max py-2">
             {duplicatedImages.map((item, index) => (
               <div
                 key={index}
