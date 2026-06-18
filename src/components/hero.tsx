@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, Play, BookOpen, Building2, Scale, FileText, Landmark, ChevronRight } from "lucide-react";
+import { Search, Compass, BookOpen, Building2, Scale, FileText, Landmark, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -77,13 +77,13 @@ export function Hero() {
               </a>
               
               <button
-                onClick={() => document.getElementById("journey")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("challenges")?.scrollIntoView({ behavior: "smooth" })}
                 className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider text-[#0B1F3A] hover:text-[#C89B3C] transition-all duration-300"
               >
                 <span className="w-10 h-10 rounded-full bg-white border border-[#E4E7EC] flex items-center justify-center text-[#0B1F3A] group shadow-sm hover:border-[#C89B3C] transition-colors duration-300">
-                  <Play size={14} className="fill-[#0B1F3A] stroke-[#0B1F3A] translate-x-[1px]" />
+                  <Compass size={14} />
                 </span>
-                Watch Overview
+                Explore Platform
               </button>
             </div>
 
@@ -128,43 +128,43 @@ export function Hero() {
                 </div>
                 <div className="grid grid-cols-2 gap-3.5">
                   {/* Category 1 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#F97316]/10 text-[#F97316] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <BookOpen size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Ambedkar Literature</span>
                   </a>
                   {/* Category 2 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#C89B3C]/10 text-[#C89B3C] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <Landmark size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Constitutional Studies</span>
                   </a>
                   {/* Category 3 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#0D9488]/10 text-[#0D9488] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <Scale size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Social Justice</span>
                   </a>
                   {/* Category 4 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#EF4444]/10 text-[#EF4444] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <FileText size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Research Papers</span>
                   </a>
                   {/* Category 5 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#D97706]/10 text-[#D97706] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <Landmark size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Archives &amp; Documents</span>
                   </a>
                   {/* Category 6 */}
-                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C] hover:bg-white hover:shadow-sm transition-all duration-300 group">
-                    <span className="w-8 h-8 rounded-lg bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <a href="#discovery" className="flex items-center gap-3 p-3 rounded-xl bg-[#FAFAF8] border border-[#E4E7EC]/60 hover:border-[#C89B3C]/40 hover:bg-white hover:shadow-sm transition-all duration-300 group">
+                    <span className="w-8 h-8 rounded-lg bg-[#0B1F3A]/5 text-[#0B1F3A] flex items-center justify-center flex-shrink-0 group-hover:bg-[#C89B3C]/10 group-hover:text-[#C89B3C] group-hover:scale-105 transition-all duration-300">
                       <Building2 size={15} />
                     </span>
                     <span className="text-xs font-bold text-[#0B1F3A] truncate">Government Publications</span>

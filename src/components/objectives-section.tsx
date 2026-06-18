@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/container";
 import { OBJECTIVES } from "@/lib/constants";
-import { Landmark, Users, GraduationCap, CheckCircle2, Quote } from "lucide-react";
 import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
 
 export function ObjectivesSection() {
@@ -34,8 +33,8 @@ export function ObjectivesSection() {
                 <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C]">
                   OUR VISION —
                 </span>
-                <span className="text-[#C89B3C]/10 group-hover:text-[#C89B3C]/25 transition-colors duration-500">
-                  <Quote size={56} fill="currentColor" stroke="none" />
+                <span className="text-5xl font-serif text-[#C89B3C]/20 leading-none select-none font-bold">
+                  “
                 </span>
               </div>
 
@@ -66,12 +65,8 @@ export function ObjectivesSection() {
                 className="bg-white border border-[#E4E7EC]  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0B1F3A]/20 transition-all duration-500 group"
               >
                 <div className="space-y-6">
-                  {/* Icon Block */}
-                  <span className="w-12 h-12 rounded-2xl bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[#0B1F3A] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                    <Landmark size={22} />
-                  </span>
-                  
                   <div className="space-y-2">
+                    <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#C89B3C] block mb-1">01 / SYSTEM GOALS</span>
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight">
                       For BARTI Operations
                     </h3>
@@ -82,8 +77,8 @@ export function ObjectivesSection() {
 
                   <ul className="space-y-3.5 pt-2">
                     {OBJECTIVES.forBarti.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-xs text-[#4A515E] leading-relaxed font-semibold">
-                        <CheckCircle2 size={15} className="text-[#0B1F3A] mt-0.5 flex-shrink-0" />
+                      <li key={item} className="flex items-start text-xs text-[#4A515E] leading-relaxed font-semibold">
+                        <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -97,12 +92,8 @@ export function ObjectivesSection() {
                 className="bg-white border border-[#DCEBE8]  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] flex flex-col justify-between hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#0D9488]/20 transition-all duration-500 group"
               >
                 <div className="space-y-6">
-                  {/* Icon Block */}
-                  <span className="w-12 h-12 rounded-2xl bg-[#0D9488]/5 border border-[#0D9488]/10 text-[#0D9488] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                    <Users size={22} />
-                  </span>
-
                   <div className="space-y-2">
+                    <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#0D9488] block mb-1">02 / CITIZEN SERVICES</span>
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight">
                       For Readers &amp; Scholars
                     </h3>
@@ -113,8 +104,8 @@ export function ObjectivesSection() {
 
                   <ul className="space-y-3.5 pt-2">
                     {OBJECTIVES.forReaders.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-xs text-[#4A515E] leading-relaxed font-semibold">
-                        <CheckCircle2 size={15} className="text-[#0D9488] mt-0.5 flex-shrink-0" />
+                      <li key={item} className="flex items-start text-xs text-[#4A515E] leading-relaxed font-semibold">
+                        <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
                         <span>{item}</span>
                       </li>
                     ))}

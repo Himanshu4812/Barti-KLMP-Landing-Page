@@ -3,13 +3,11 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Container } from "./container"
-import { ListChecks, BookOpen, BarChart3 } from "lucide-react"
 import Image from "next/image"
 
 const CARDS = [
   {
     title: "Operational Gaps",
-    icon: ListChecks,
     accent: "#EF4444",
     image: "/images/operational_gaps_sketch.png",
     items: [
@@ -21,7 +19,6 @@ const CARDS = [
   },
   {
     title: "Reader Experience",
-    icon: BookOpen,
     accent: "#0D9488",
     image: "/images/reader_experience_sketch.png",
     items: [
@@ -33,7 +30,6 @@ const CARDS = [
   },
   {
     title: "Management Blind Spots",
-    icon: BarChart3,
     accent: "#C89B3C",
     image: "/images/management_blindspots_sketch.png",
     items: [
@@ -54,14 +50,12 @@ function hexToRgba(hex: string, alpha: number) {
 
 interface CardType {
   title: string
-  icon: any
   accent: string
   image: string
   items: string[]
 }
 
 function DesktopCard({ card, style }: { card: CardType; style: any }) {
-  const Icon = card.icon
   return (
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
       <motion.div
@@ -71,16 +65,6 @@ function DesktopCard({ card, style }: { card: CardType; style: any }) {
         {/* Left side: Content */}
         <div className="w-1/2 p-12 lg:p-14 flex flex-col justify-center">
           <div>
-            <span
-              className="w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-sm"
-              style={{
-                backgroundColor: hexToRgba(card.accent, 0.1),
-                border: `1px solid ${hexToRgba(card.accent, 0.2)}`,
-                color: card.accent,
-              }}
-            >
-              <Icon size={24} />
-            </span>
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block mb-2">
               CHALLENGE CATEGORY —
             </span>
@@ -91,12 +75,9 @@ function DesktopCard({ card, style }: { card: CardType; style: any }) {
               {card.items.map((item, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3.5 text-sm lg:text-base text-[#4A515E] leading-relaxed"
+                  className="flex items-start text-sm lg:text-base text-[#4A515E] leading-relaxed"
                 >
-                  <span
-                    className="w-2 h-2 rounded-full mt-2.5 flex-shrink-0"
-                    style={{ backgroundColor: card.accent }}
-                  />
+                  <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -124,21 +105,10 @@ function DesktopCard({ card, style }: { card: CardType; style: any }) {
 }
 
 function MobileCard({ card }: { card: CardType }) {
-  const Icon = card.icon
   return (
     <div className="bg-white border border-[#E4E7EC]/80 shadow-[0_8px_30px_rgba(11,31,58,0.03)] w-full max-w-md mx-auto rounded-2xl overflow-hidden flex flex-col mb-8">
       {/* Top half: Content */}
       <div className="p-8 flex flex-col justify-center">
-        <span
-          className="w-10 h-10 rounded-lg flex items-center justify-center mb-5 shadow-sm"
-          style={{
-            backgroundColor: hexToRgba(card.accent, 0.1),
-            border: `1px solid ${hexToRgba(card.accent, 0.2)}`,
-            color: card.accent,
-          }}
-        >
-          <Icon size={20} />
-        </span>
         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C89B3C] block mb-1">
           CHALLENGE CATEGORY —
         </span>
@@ -149,12 +119,9 @@ function MobileCard({ card }: { card: CardType }) {
           {card.items.map((item, i) => (
             <li
               key={i}
-              className="flex items-start gap-3 text-xs sm:text-sm text-[#4A515E] leading-relaxed"
+              className="flex items-start text-xs sm:text-sm text-[#4A515E] leading-relaxed"
             >
-              <span
-                className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                style={{ backgroundColor: card.accent }}
-              />
+              <span className="text-[#C89B3C] font-bold select-none mr-2 flex-shrink-0">—</span>
               <span>{item}</span>
             </li>
           ))}

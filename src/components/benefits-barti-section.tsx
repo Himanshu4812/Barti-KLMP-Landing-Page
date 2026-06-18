@@ -1,7 +1,6 @@
 "use client";
 
 import { Container } from "@/components/container";
-import { Landmark, GraduationCap, FileSearch, Users, Check } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
@@ -29,44 +28,32 @@ export function BenefitsBartiSection() {
               {/* Category 1 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F4F7FB] border border-[#DCE4F0]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F4F7FB] border-l-4 border-l-[#2563EB] border border-[#DCE4F0]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
               >
-                <span className="w-14 h-14 rounded-full bg-[#2563EB]/10 text-[#2563EB] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                  <Landmark size={26} />
-                </span>
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Government Libraries</span>
               </motion.div>
 
               {/* Category 2 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#FDF6E2] border border-[#F5E6BE]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#FDF6E2] border-l-4 border-l-[#D97706] border border-[#F5E6BE]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
               >
-                <span className="w-14 h-14 rounded-full bg-[#D97706]/10 text-[#D97706] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                  <GraduationCap size={26} />
-                </span>
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Universities &amp; Colleges</span>
               </motion.div>
 
               {/* Category 3 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F0F8F6] border border-[#D1EBE5]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F0F8F6] border-l-4 border-l-[#0D9488] border border-[#D1EBE5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
               >
-                <span className="w-14 h-14 rounded-full bg-[#0D9488]/10 text-[#0D9488] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                  <FileSearch size={26} />
-                </span>
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Research Institutions</span>
               </motion.div>
 
               {/* Category 4 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F8F5FC] border border-[#E8DEF5]  p-6 flex flex-col items-center text-center space-y-4 hover:shadow-md transition-all duration-300 group"
+                className="bg-[#F8F5FC] border-l-4 border-l-[#6D28D9] border border-[#E8DEF5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
               >
-                <span className="w-14 h-14 rounded-full bg-[#6D28D9]/10 text-[#6D28D9] flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
-                  <Users size={26} />
-                </span>
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Social Justice Orgs</span>
               </motion.div>
 
@@ -100,29 +87,21 @@ export function BenefitsBartiSection() {
               </span>
 
               <ul className="space-y-4 pt-1">
-                <li className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#C89B3C] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={14} strokeWidth={3} />
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A]">Centralized knowledge preservation ecosystem</span>
+                <li className="flex items-start">
+                  <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A] leading-relaxed">Centralized knowledge preservation ecosystem</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#C89B3C] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={14} strokeWidth={3} />
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A]">Enhanced search discovery &amp; digital downloads</span>
+                <li className="flex items-start">
+                  <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A] leading-relaxed">Enhanced search discovery &amp; digital downloads</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#C89B3C] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={14} strokeWidth={3} />
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A]">Data-driven reporting on resource utilization</span>
+                <li className="flex items-start">
+                  <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A] leading-relaxed">Data-driven reporting on resource utilization</span>
                 </li>
-                <li className="flex items-center gap-3">
-                  <span className="w-6 h-6 rounded-full bg-[#C89B3C] text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Check size={14} strokeWidth={3} />
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A]">Empowered academic research and learning community</span>
+                <li className="flex items-start">
+                  <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#0B1F3A] leading-relaxed">Empowered academic research and learning community</span>
                 </li>
               </ul>
             </div>

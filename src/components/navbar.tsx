@@ -95,17 +95,6 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* CTA Action Button */}
-          <div className="hidden lg:flex items-center">
-            <a
-              href="#discovery"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#0B1F3A] text-white hover:bg-[#C89B3C] hover:text-[#0B1F3A] text-xs font-bold uppercase tracking-wider rounded-lg transition-all duration-300 shadow-sm hover:shadow"
-            >
-              Explore KLMP
-              <ArrowRight size={14} />
-            </a>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -137,13 +126,7 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#discovery"
-                onClick={() => setMobileOpen(false)}
-                className="block text-center px-5 py-3.5 bg-[#0B1F3A] text-white hover:bg-[#C89B3C] hover:text-[#0B1F3A] text-sm font-bold uppercase tracking-wider rounded-lg transition-all duration-300 mt-4"
-              >
-                Explore KLMP
-              </a>
+
             </div>
           </motion.div>
         )}

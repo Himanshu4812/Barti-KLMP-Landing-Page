@@ -3,18 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/container";
 import { WHY_CHOOSE } from "@/lib/constants";
-import { ShieldCheck, BookMarked, Layers, BarChart3, Cpu, Users } from "lucide-react";
 import { staggerContainer, cardItem } from "@/lib/animations";
-
-// Mapping icons to card indices
-const ICONS = [
-  { icon: ShieldCheck, color: "text-[#0B1F3A]", bg: "bg-[#0B1F3A]/5 border-[#0B1F3A]/10" },
-  { icon: BookMarked, color: "text-[#C89B3C]", bg: "bg-[#C89B3C]/5 border-[#C89B3C]/10" },
-  { icon: Layers, color: "text-[#0D9488]", bg: "bg-[#0D9488]/5 border-[#0D9488]/10" },
-  { icon: BarChart3, color: "text-[#6D28D9]", bg: "bg-[#6D28D9]/5 border-[#6D28D9]/10" },
-  { icon: Cpu, color: "text-[#EA580C]", bg: "bg-[#EA580C]/5 border-[#EA580C]/10" },
-  { icon: Users, color: "text-[#16A34A]", bg: "bg-[#16A34A]/5 border-[#16A34A]/10" }
-];
 
 export function WhyChooseSection() {
   return (
@@ -43,19 +32,18 @@ export function WhyChooseSection() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1280px] mx-auto"
         >
           {WHY_CHOOSE.cards.map((card, index) => {
-            const iconObj = ICONS[index] || ICONS[0];
-            const IconComponent = iconObj.icon;
+            const numStr = String(index + 1).padStart(2, "0");
 
             return (
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/80  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.04)] hover:border-[#C89B3C]/20 transition-all duration-500 group flex flex-col justify-between min-h-[220px]"
+                className="bg-white border border-[#E4E7EC]/80  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.04)] hover:border-[#C89B3C]/20 transition-all duration-500 group flex flex-col justify-between min-h-[190px]"
               >
                 <div className="space-y-4">
-                  {/* Icon Container */}
-                  <span className={`w-12 h-12 rounded-2xl flex items-center justify-center border shadow-sm group-hover:scale-105 transition-transform duration-300 ${iconObj.bg} ${iconObj.color}`}>
-                    <IconComponent size={22} />
+                  {/* Serif Typographic Index */}
+                  <span className="text-2xl font-serif font-bold text-[#C89B3C] block select-none">
+                    {numStr}
                   </span>
 
                   <div className="space-y-2">
@@ -75,3 +63,4 @@ export function WhyChooseSection() {
     </section>
   );
 }
+

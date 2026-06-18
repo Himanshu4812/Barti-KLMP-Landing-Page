@@ -1,7 +1,6 @@
 "use client";
 
 import { Container } from "@/components/container";
-import { BookOpen, Users, ShieldCheck, Clock } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { staggerContainer, cardItem } from "@/lib/animations";
@@ -54,57 +53,53 @@ export function StatsSection() {
           {/* Metric 1 */}
           <motion.div
             variants={cardItem}
-            className="flex items-center gap-5 group"
+            className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 group sm:pl-4 first:pl-0"
           >
-            <span className="w-20 h-20 rounded-full border border-white/25 flex items-center justify-center text-[#C89B3C] bg-white/5 flex-shrink-0 group-hover:border-[#C89B3C] group-hover:bg-[#C89B3C]/10 transition-all duration-500 shadow-md">
-              <BookOpen size={30} />
+            <span className="text-4xl md:text-5xl font-extrabold font-heading text-[#C89B3C] tracking-tight group-hover:scale-[1.03] transition-transform duration-300">
+              12,000+
             </span>
-            <div className="flex flex-col text-left">
-              <span className="text-4xl font-extrabold font-heading text-[#C89B3C] tracking-tight">12,000+</span>
-              <span className="text-[10px] text-white/75 font-bold tracking-wider uppercase mt-1">Books &amp; Resources</span>
-            </div>
+            <span className="text-[10px] text-white/70 font-bold tracking-widest uppercase mt-1">
+              Books &amp; Resources
+            </span>
           </motion.div>
 
           {/* Metric 2 */}
           <motion.div
             variants={cardItem}
-            className="flex items-center gap-5 group"
+            className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 group sm:border-l sm:border-white/10 sm:pl-8"
           >
-            <span className="w-20 h-20 rounded-full border border-white/25 flex items-center justify-center text-[#C89B3C] bg-white/5 flex-shrink-0 group-hover:border-[#C89B3C] group-hover:bg-[#C89B3C]/10 transition-all duration-500 shadow-md">
-              <Users size={30} />
+            <span className="text-4xl md:text-5xl font-extrabold font-heading text-[#C89B3C] tracking-tight group-hover:scale-[1.03] transition-transform duration-300">
+              8,000+
             </span>
-            <div className="flex flex-col text-left">
-              <span className="text-4xl font-extrabold font-heading text-[#C89B3C] tracking-tight">8,000+</span>
-              <span className="text-[10px] text-white/75 font-bold tracking-wider uppercase mt-1">Active Members</span>
-            </div>
+            <span className="text-[10px] text-white/70 font-bold tracking-widest uppercase mt-1">
+              Active Members
+            </span>
           </motion.div>
 
           {/* Metric 3 */}
           <motion.div
             variants={cardItem}
-            className="flex items-center gap-5 group"
+            className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 group sm:border-l sm:border-white/10 sm:pl-8"
           >
-            <span className="w-20 h-20 rounded-full border border-white/25 flex items-center justify-center text-[#C89B3C] bg-white/5 flex-shrink-0 group-hover:border-[#C89B3C] group-hover:bg-[#C89B3C]/10 transition-all duration-500 shadow-md">
-              <ShieldCheck size={30} />
+            <span className="text-4xl md:text-5xl font-extrabold font-heading text-[#C89B3C] tracking-tight group-hover:scale-[1.03] transition-transform duration-300">
+              98%
             </span>
-            <div className="flex flex-col text-left">
-              <span className="text-4xl font-extrabold font-heading text-[#C89B3C] tracking-tight">98%</span>
-              <span className="text-[10px] text-white/75 font-bold tracking-wider uppercase mt-1">Resource Availability</span>
-            </div>
+            <span className="text-[10px] text-white/70 font-bold tracking-widest uppercase mt-1">
+              Resource Availability
+            </span>
           </motion.div>
 
           {/* Metric 4 */}
           <motion.div
             variants={cardItem}
-            className="flex items-center gap-5 group"
+            className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 group sm:border-l sm:border-white/10 sm:pl-8"
           >
-            <span className="w-20 h-20 rounded-full border border-white/25 flex items-center justify-center text-[#C89B3C] bg-white/5 flex-shrink-0 group-hover:border-[#C89B3C] group-hover:bg-[#C89B3C]/10 transition-all duration-500 shadow-md">
-              <Clock size={30} />
+            <span className="text-4xl md:text-5xl font-extrabold font-heading text-[#C89B3C] tracking-tight group-hover:scale-[1.03] transition-transform duration-300">
+              24/7
             </span>
-            <div className="flex flex-col text-left">
-              <span className="text-4xl font-extrabold font-heading text-[#C89B3C] tracking-tight">24/7</span>
-              <span className="text-[10px] text-white/75 font-bold tracking-wider uppercase mt-1">Digital Access</span>
-            </div>
+            <span className="text-[10px] text-white/70 font-bold tracking-widest uppercase mt-1">
+              Digital Access
+            </span>
           </motion.div>
 
         </motion.div>
