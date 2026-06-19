@@ -187,8 +187,14 @@ export function ProblemSection() {
   const dot3Scale = useTransform(scrollYProgress, [0.45, 0.55, 0.85, 1.0], [1, 1, 1.3, 1.3])
 
   return (
-    <section id="challenges" className="bg-[#F3F2EE] relative border-t border-b border-[#E4E7EC]/40">
+    <section id="challenges" className="bg-[#F5E6C8] relative border-t border-b border-[#E4E7EC]/40 ">
       
+      {/* Top blur transition: blends from previous section's #FAFAF8 into gold */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FAFAF8] to-transparent pointer-events-none z-10" />
+
+      {/* Bottom blur transition: blends gold into next section's #FAFAF8 */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FAFAF8] to-transparent pointer-events-none z-10" />
+
       {/* Desktop view (Sticky scroll overlapping cards) */}
       <div className="hidden md:block">
         <div ref={sectionRef} className="relative h-[300vh]">
