@@ -4,7 +4,6 @@ export const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Why Choose", href: "#why-choose" },
   { label: "Discovery", href: "#discovery" },
-  { label: "Join", href: "#cta" },
 ] as const;
 
 export const HERO = {

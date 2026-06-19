@@ -7,7 +7,7 @@ import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
 
 export function ObjectivesSection() {
   return (
-    <section id="objectives" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden">
+    <section id="objectives" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
       
       {/* Blueprint grid watermark */}
       <div className="absolute inset-0 opacity-5 pointer-events-none z-0 select-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />

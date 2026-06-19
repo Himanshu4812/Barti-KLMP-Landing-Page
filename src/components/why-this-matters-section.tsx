@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export function WhyThisMattersSection() {
   return (
-    <section id="why-this-matters" className="bg-[#FAFAF8] py-16 md:py-20 relative overflow-hidden">
+    <section id="why-this-matters" className="bg-[#FAFAF8] py-16 md:py-20 relative overflow-hidden ">
       
       {/* Background Parliament Line-Art Sketch Illustration (Huge & Integrated) */}
       <div className="absolute right-0 bottom-0 w-[800px] md:w-[900px] h-[480px] md:h-[540px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">

@@ -8,7 +8,7 @@ import { fadeUp } from "@/lib/animations";
 
 export function CTASection() {
   return (
-    <section id="cta" className="relative overflow-hidden bg-[#FAFAF8] py-20 lg:py-28 border-t border-[#E4E7EC]">
+    <section id="cta" className="relative overflow-hidden bg-[#FAFAF8] py-20 lg:py-28 border-t border-[#E4E7EC] ">
       
       {/* Background Stacked Books & Ambedkar Sketch Illustration (Huge & Anchored) */}
       <div className="absolute right-0 bottom-0 w-[800px] md:w-[900px] h-[600px] md:h-[680px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">

@@ -7,7 +7,7 @@ import { staggerContainer, cardItem } from "@/lib/animations";
 
 export function WhyChooseSection() {
   return (
-    <section id="why-choose" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden">
+    <section id="why-choose" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
       
       {/* Dynamic background element */}
       <div className="absolute right-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(200,155,60,0.02),transparent_70%)] pointer-events-none" />

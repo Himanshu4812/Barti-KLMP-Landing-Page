@@ -272,7 +272,7 @@ export function FeaturesSection() {
   const currentDesc = MOCKUP_TABS.find(t => t.id === activeTab)?.desc || "";
 
   return (
-    <section id="features" className="bg-[#F3F2EE] py-16 md:py-20 border-b border-[#E4E7EC]/40">
+    <section id="features" className="bg-[#F3F2EE] py-16 md:py-20 border-b border-[#E4E7EC]/40 ">
       <Container>
         
         {/* Section Header */}

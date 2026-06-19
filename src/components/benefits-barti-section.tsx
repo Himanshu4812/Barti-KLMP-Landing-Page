@@ -7,7 +7,7 @@ import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
 
 export function BenefitsBartiSection() {
   return (
-    <section id="benefits" className="bg-[#F3F2EE] py-16 md:py-20 relative overflow-hidden">
+    <section id="benefits" className="bg-[#F3F2EE] py-16 md:py-20 relative overflow-hidden ">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[40px] items-start w-full max-w-[1280px] mx-auto relative z-10">
           
