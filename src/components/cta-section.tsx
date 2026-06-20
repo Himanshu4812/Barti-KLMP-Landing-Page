@@ -11,12 +11,12 @@ export function CTASection() {
     <section id="cta" className="relative overflow-hidden bg-[#FAFAF8] py-20 lg:py-28 border-t border-[#E4E7EC] ">
       
       {/* Background Stacked Books & Ambedkar Sketch Illustration (Huge & Anchored) */}
-      <div className="absolute right-0 bottom-0 w-[800px] md:w-[900px] h-[600px] md:h-[680px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">
+      <div className="absolute right-0 bottom-0 w-[600px] md:w-[700px] h-[450px] md:h-[530px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">
         <Image 
           src="/images/ambedkar_books_sketch_clean.png" 
           alt="Books &amp; Ambedkar Portrait Sketch" 
-          width={900} 
-          height={680}
+          width={700} 
+          height={530}
           className="object-contain object-center object-right"
           priority
         />
@@ -42,15 +42,6 @@ export function CTASection() {
               Explore. Learn. Transform.
             </p>
             
-            <div className="pt-2">
-              <a
-                href="#discovery"
-                className="inline-flex items-center justify-center gap-2.5 px-9 py-4.5 bg-[#0B1F3A] text-white hover:bg-[#C89B3C] hover:text-[#0B1F3A] text-sm font-bold uppercase tracking-wider rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                Explore KLMP
-                <ArrowRight size={18} />
-              </a>
-            </div>
           </div>
 
         </motion.div>

@@ -88,13 +88,6 @@ export function Hero() {
                 Explore Collections
                 <ChevronRight size={16} />
               </a>
-              
-              <button
-                onClick={() => document.getElementById("challenges")?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#0B1F3A] border border-[#E4E7EC] hover:border-[#C89B3C] hover:text-[#C89B3C] text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow"
-              >
-                Explore Platform
-              </button>
           </div>
 
         </div>
