@@ -1,6 +1,5 @@
 export const NAV_LINKS = [
-  { label: "Home", href: "#" },
-  { label: "Objectives", href: "#objectives" },
+  { label: "Solution", href: "#challenges" },
   { label: "Features", href: "#features" },
   { label: "Why Choose", href: "#why-choose" },
   { label: "Discovery", href: "#discovery" },
@@ -87,29 +86,71 @@ export const FEATURES_HIGHLIGHT = {
   cards: [
     {
       title: "Barcode-Driven Cataloging",
-      description: "Scan ISBN barcode to auto-fetch book metadata and fill details instantly. Reduces manual entry errors and speeds up catalog creation."
+      description: "Scan ISBN barcode to auto-fetch book metadata and fill details instantly. Reduces manual entry errors and speeds up catalog creation.",
+      lottie: "/features/Scanner File.lottie",
+      theme: {
+        bg: "bg-[#F0F7FF]/60",
+        border: "border-[#D6E4FF]",
+        iconBox: "border-[#ADC6FF] text-[#1D39C4] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(29,57,196,0.015)] hover:shadow-[0_15px_40px_rgba(29,57,196,0.04)] hover:border-[#1D39C4]/20"
+      }
     },
     {
       title: "QR-Based Issue & Return",
-      description: "Staff scan Member QR card and Book Barcode. System auto-updates inventory, calculates overdue days and marks return in real-time."
+      description: "Staff scan Member QR card and Book Barcode. System auto-updates inventory, calculates overdue days and marks return in real-time.",
+      lottie: "/features/QR Scan.lottie",
+      theme: {
+        bg: "bg-[#F6FFED]/60",
+        border: "border-[#D9F7BE]",
+        iconBox: "border-[#B7EB8F] text-[#389E0D] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(56,158,13,0.015)] hover:shadow-[0_15px_40px_rgba(56,158,13,0.04)] hover:border-[#389E0D]/20"
+      }
     },
     {
       title: "Smart Book Discovery",
-      description: "Public portal with advanced search by title, author, subject, language. Filters for Ambedkar literature, social justice, law, constitution and more."
+      description: "Public portal with advanced search by title, author, subject, language. Filters for Ambedkar literature, social justice, law, constitution and more.",
+      lottie: "/features/books.lottie",
+      theme: {
+        bg: "bg-[#FFF7E6]/60",
+        border: "border-[#FFE7BA]",
+        iconBox: "border-[#FFD591] text-[#D46B08] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(212,107,8,0.015)] hover:shadow-[0_15px_40px_rgba(212,107,8,0.04)] hover:border-[#D46B08]/20"
+      }
     },
     {
       title: "Configurable Rules Engine",
-      description: "Set borrowing limits per member type (student, scholar, officer), custom fine amounts, and duration policies — all configurable by administrators."
+      description: "Set borrowing limits per member type (student, scholar, officer), custom fine amounts, and duration policies — all configurable by administrators.",
+      lottie: "/features/database.lottie",
+      theme: {
+        bg: "bg-[#F9F0FF]/60",
+        border: "border-[#EFDBFF]",
+        iconBox: "border-[#D3ADF7] text-[#531DAB] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(83,29,171,0.015)] hover:shadow-[0_15px_40px_rgba(83,29,171,0.04)] hover:border-[#531DAB]/20"
+      }
     },
     {
       title: "Digital Membership Cards",
-      description: "Unique QR-coded membership cards for each member, used seamlessly during all issue and return transactions at the library."
+      description: "Unique QR-coded membership cards for each member, used seamlessly during all issue and return transactions at the library.",
+      lottie: "/features/Card.lottie",
+      theme: {
+        bg: "bg-[#F0FDF4]/60",
+        border: "border-[#DCFCE7]",
+        iconBox: "border-[#BBF7D0] text-[#16A34A] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(22,163,74,0.015)] hover:shadow-[0_15px_40px_rgba(22,163,74,0.04)] hover:border-[#16A34A]/20"
+      }
     },
     {
       title: "Government-Grade Reporting",
-      description: "Generate monthly, quarterly and annual reports exportable to PDF and Excel for management, government submissions and audit purposes."
+      description: "Generate monthly, quarterly and annual reports exportable to PDF and Excel for management, government submissions and audit purposes.",
+      lottie: "/features/Reports.lottie",
+      theme: {
+        bg: "bg-[#FFF1F0]/60",
+        border: "border-[#FFD8BF]",
+        iconBox: "border-[#FFA39E] text-[#CF1322] bg-white",
+        glow: "shadow-[0_8px_30px_rgba(207,19,34,0.015)] hover:shadow-[0_15px_40px_rgba(207,19,34,0.04)] hover:border-[#CF1322]/20"
+      }
     }
-  ] as const
+  ]
 };
 
 export const WHY_CHOOSE = {

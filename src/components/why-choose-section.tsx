@@ -5,6 +5,24 @@ import { Container } from "@/components/container";
 import { WHY_CHOOSE } from "@/lib/constants";
 import { staggerContainer, cardItem } from "@/lib/animations";
 
+const CARD_IMAGES = [
+  "/images/why-choose/gov_institution.png",
+  "/images/why-choose/ambedkar_heritage.png",
+  "/images/why-choose/scalable_network.png",
+  "/images/why-choose/data_decisions.png",
+  "/images/why-choose/ai_intelligence.png",
+  "/images/why-choose/citizen_access.png"
+];
+
+const CARD_BG_COLORS = [
+  "bg-[#FDF6EE]/70",
+  "bg-[#F0FBFB]/70",
+  "bg-[#FBF0F6]/70",
+  "bg-[#F6FBF0]/70",
+  "bg-[#F5F0FB]/70",
+  "bg-[#FEFBF0]/70"
+];
+
 export function WhyChooseSection() {
   return (
     <section id="why-choose" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
@@ -38,11 +56,23 @@ export function WhyChooseSection() {
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/80  p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.04)] hover:border-[#C89B3C]/20 transition-all duration-500 group flex flex-col justify-between min-h-[190px]"
+                className={`relative overflow-hidden ${CARD_BG_COLORS[index]} border border-[#E4E7EC]/80 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.015)] hover:shadow-[0_20px_50px_rgba(11,31,58,0.18)] hover:border-[#C89B3C]/40 transition-all duration-500 group flex flex-col justify-between min-h-[220px]`}
               >
-                <div className="space-y-4">
+                {/* Dynamic Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700 ease-out pointer-events-none z-0"
+                  style={{ backgroundImage: `url(${CARD_IMAGES[index]})` }}
+                />
+
+                {/* Dark Gradient Overlay */}
+                <div 
+                  className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/20 via-[#0B1F3A]/45 to-[#0B1F3A]/65 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+                />
+
+                {/* Content Container (elevated above background) */}
+                <div className="relative z-20 space-y-4 flex flex-col justify-between h-full w-full">
                   {/* Serif Typographic Index */}
-                  <span className="text-2xl font-serif font-bold text-[#C89B3C] block select-none">
+                  <span className="text-2xl font-serif font-bold text-[#C89B3C] block select-none group-hover:text-white transition-colors duration-300">
                     {numStr}
                   </span>
 
@@ -50,7 +80,7 @@ export function WhyChooseSection() {
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <p className="text-xs text-[#5E6573] leading-relaxed">
+                    <p className="text-xs text-[#5E6573] group-hover:text-slate-200/90 leading-relaxed transition-colors duration-300">
                       {card.description}
                     </p>
                   </div>
@@ -63,4 +93,5 @@ export function WhyChooseSection() {
     </section>
   );
 }
+
 

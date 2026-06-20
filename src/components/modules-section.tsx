@@ -16,9 +16,14 @@ import {
   Contact,
   ArrowRight,
   Database,
-  Cpu,
   LayoutGrid
 } from "lucide-react";
+import dynamic from "next/dynamic";
+
+const DotLottieReact = dynamic(
+  () => import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
+  { ssr: false }
+);
 
 // Mockup 1: Library Operations Dashboard Mockup (Cataloging & Inventory Tabs)
 function LibraryOperationsMockup() {
@@ -300,21 +305,33 @@ export function FeaturesSection() {
               <motion.div
                 key={card.title}
                 variants={cardItem}
-                className="bg-white border border-[#E4E7EC]/80  p-6 shadow-[0_8px_30px_rgb(0,0,0,0.01)] hover:shadow-[0_15px_40px_rgb(0,0,0,0.03)] hover:border-[#C89B3C]/20 transition-all duration-300 flex flex-col justify-between min-h-[180px] group"
+                className={`p-6 border flex flex-col justify-between min-h-[380px] group transition-all duration-300 ${card.theme.bg} ${card.theme.border} ${card.theme.glow}`}
               >
-                <div className="space-y-4">
-                  <span className="w-10 h-10 rounded-xl bg-[#0B1F3A]/5 border border-[#0B1F3A]/10 text-[#0B1F3A] flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300">
+                <div className="space-y-4 flex-1 mb-6">
+                  {/* Icon Box */}
+                  <span className={`w-10 h-10 rounded-xl border flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300 ${card.theme.iconBox}`}>
                     <IconComponent size={20} />
                   </span>
                   
+                  {/* Title & Description */}
                   <div className="space-y-2">
-                    <h3 className="text-base font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
                       {card.title}
                     </h3>
                     <p className="text-xs text-[#5E6573] leading-relaxed">
                       {card.description}
                     </p>
                   </div>
+                </div>
+
+                {/* Lottie Animation container at the bottom */}
+                <div className="bg-white rounded-2xl border border-[#E4E7EC] shadow-sm p-4 flex items-center justify-center h-44 overflow-hidden relative group-hover:shadow-md transition-shadow duration-300">
+                  <DotLottieReact
+                    src={card.lottie}
+                    loop
+                    autoplay
+                    className="w-full h-full max-h-[140px]"
+                  />
                 </div>
               </motion.div>
             );
