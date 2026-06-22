@@ -89,7 +89,7 @@ export function Footer() {
       {/* Background Image with Dark Navy & Gold Radial Glow Overlays */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
-          src="/images/library_footer_bg.png"
+          src="/images/library_footer_bg.webp"
           alt="Library Background"
           fill
           className="object-cover opacity-35"

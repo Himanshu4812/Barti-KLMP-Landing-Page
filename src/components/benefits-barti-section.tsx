@@ -76,7 +76,7 @@ export function BenefitsBartiSection() {
             {/* Background Line-Sketch overlay (Huge & Highly Visible) */}
             <div className="absolute right-0 bottom-0 w-[450px] md:w-[500px] h-[320px] md:h-[360px] opacity-40 pointer-events-none z-0 mix-blend-multiply">
               <Image 
-                src="/images/readers_sketch_clean.png" 
+                src="/images/readers_sketch_clean.webp" 
                 alt="Readers &amp; Researchers Studying Sketch" 
                 width={500} 
                 height={360}

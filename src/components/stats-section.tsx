@@ -22,7 +22,7 @@ export function StatsSection() {
       {/* Inverted Parliament outline watermark overlaid on dark blue */}
       <div className="absolute right-0 bottom-0 w-[700px] h-[450px] opacity-20 pointer-events-none z-0 select-none invert mix-blend-screen">
         <Image 
-          src="/images/parliament_sketch_clean.png" 
+          src="/images/parliament_sketch_clean.webp" 
           alt="Parliament Sketch Background" 
           width={700} 
           height={450} 

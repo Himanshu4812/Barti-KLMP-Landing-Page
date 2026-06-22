@@ -9,7 +9,7 @@ const CARDS = [
   {
     title: "Operational Gaps",
     accent: "#EF4444",
-    image: "/images/operational_gaps_sketch.png",
+    image: "/images/operational_gaps_sketch.webp",
     items: [
       "Manual book entry & cataloging",
       "No centralized inventory",
@@ -20,7 +20,7 @@ const CARDS = [
   {
     title: "Reader Experience",
     accent: "#0D9488",
-    image: "/images/reader_experience_sketch.png",
+    image: "/images/reader_experience_sketch.webp",
     items: [
       "No digital engagement",
       "Lack of borrowing history",
@@ -31,7 +31,7 @@ const CARDS = [
   {
     title: "Management Blind Spots",
     accent: "#C89B3C",
-    image: "/images/management_blindspots_sketch.png",
+    image: "/images/management_blindspots_sketch.webp",
     items: [
       "No analytics on utilization",
       "Difficulty identifying popular books",

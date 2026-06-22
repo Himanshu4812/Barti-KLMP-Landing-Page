@@ -6,12 +6,12 @@ interface ImageItem {
 }
 
 const defaultImages: ImageItem[] = [
-  { src: "/images/discovery/ambedkar_literature.png", label: "Ambedkar Literature" },
-  { src: "/images/discovery/constitutional_studies.png", label: "Constitutional Studies" },
-  { src: "/images/discovery/social_justice.png", label: "Social Justice" },
-  { src: "/images/discovery/research_papers.png", label: "Research Papers" },
-  { src: "/images/discovery/government_publications.png", label: "Government Publications" },
-  { src: "/images/discovery/archives.png", label: "Archives & Documents" },
+  { src: "/images/discovery/ambedkar_literature.webp", label: "Ambedkar Literature" },
+  { src: "/images/discovery/constitutional_studies.webp", label: "Constitutional Studies" },
+  { src: "/images/discovery/social_justice.webp", label: "Social Justice" },
+  { src: "/images/discovery/research_papers.webp", label: "Research Papers" },
+  { src: "/images/discovery/government_publications.webp", label: "Government Publications" },
+  { src: "/images/discovery/archives.webp", label: "Archives & Documents" },
 ];
 
 interface ImageAutoSliderProps {

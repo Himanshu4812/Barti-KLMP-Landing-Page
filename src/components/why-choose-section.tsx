@@ -6,12 +6,12 @@ import { WHY_CHOOSE } from "@/lib/features";
 import { staggerContainer, cardItem } from "@/lib/animations";
 
 const CARD_IMAGES = [
-  "/images/why-choose/gov_institution.png",
-  "/images/why-choose/ambedkar_heritage.png",
-  "/images/why-choose/scalable_network.png",
-  "/images/why-choose/data_decisions.png",
-  "/images/why-choose/ai_intelligence.png",
-  "/images/why-choose/citizen_access.png"
+  "/images/why-choose/gov_institution.webp",
+  "/images/why-choose/ambedkar_heritage.webp",
+  "/images/why-choose/scalable_network.webp",
+  "/images/why-choose/data_decisions.webp",
+  "/images/why-choose/ai_intelligence.webp",
+  "/images/why-choose/citizen_access.webp"
 ];
 
 const CARD_BG_COLORS = [

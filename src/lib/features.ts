@@ -86,7 +86,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Barcode-Driven Cataloging",
       description: "Scan ISBN barcode to auto-fetch book metadata and fill details instantly. Reduces manual entry errors and speeds up catalog creation.",
-      image: "/images/feature/Barcode-Driven Cataloging.jpg",
+      image: "/images/feature/Barcode-Driven Cataloging.webp",
       theme: {
         bg: "bg-[#F0F7FF]/60",
         border: "border-[#D6E4FF]",
@@ -108,7 +108,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Smart Book Discovery",
       description: "Public portal with advanced search by title, author, subject, language. Filters for Ambedkar literature, social justice, law, constitution and more.",
-      image: "/images/feature/Smart Book Discovery.jpg",
+      image: "/images/feature/Smart Book Discovery.webp",
       theme: {
         bg: "bg-[#FFF7E6]/60",
         border: "border-[#FFE7BA]",
@@ -119,7 +119,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Configurable Rules Engine",
       description: "Set borrowing limits per member type (student, scholar, officer), custom fine amounts, and duration policies — all configurable by administrators.",
-      image: "/images/feature/Configurable Rules Engine.png",
+      image: "/images/feature/Configurable Rules Engine.webp",
       theme: {
         bg: "bg-[#F9F0FF]/60",
         border: "border-[#EFDBFF]",
@@ -130,7 +130,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Digital Membership Cards",
       description: "Unique QR-coded membership cards for each member, used seamlessly during all issue and return transactions at the library.",
-      image: "/images/feature/Digital Membership Cards.jpg",
+      image: "/images/feature/Digital Membership Cards.webp",
       theme: {
         bg: "bg-[#F0FDF4]/60",
         border: "border-[#DCFCE7]",

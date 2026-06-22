@@ -13,7 +13,7 @@ export function CTASection() {
       {/* Background Stacked Books & Ambedkar Sketch Illustration (Huge & Anchored) */}
       <div className="absolute right-0 bottom-0 w-[600px] md:w-[700px] h-[450px] md:h-[530px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">
         <Image 
-          src="/images/ambedkar_books_sketch_clean.png" 
+          src="/images/ambedkar_books_sketch_clean.webp" 
           alt="Books &amp; Ambedkar Portrait Sketch" 
           width={700} 
           height={530}

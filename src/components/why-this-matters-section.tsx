@@ -11,7 +11,7 @@ export function WhyThisMattersSection() {
       {/* Background Parliament Line-Art Sketch Illustration (Huge & Integrated) */}
       <div className="absolute right-0 bottom-0 w-[800px] md:w-[900px] h-[480px] md:h-[540px] opacity-40 pointer-events-none hidden lg:block select-none mix-blend-multiply z-0">
         <Image 
-          src="/images/parliament_sketch_clean.png" 
+          src="/images/parliament_sketch_clean.webp" 
           alt="Parliament Sketch" 
           width={900} 
           height={540} 
