@@ -3,27 +3,16 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
-import { FEATURES_HIGHLIGHT } from "@/lib/constants";
+import { FEATURES_HIGHLIGHT } from "@/lib/features";
+import { HomePage as ScrollingFeatures } from "@/components/ui/scrolling-animation";
 import { Container } from "@/components/container";
 import { 
   Search, 
   Sparkles, 
   Folder, 
-  FileText, 
-  Barcode, 
-  QrCode, 
-  Sliders, 
-  Contact,
   ArrowRight,
-  Database,
   LayoutGrid
 } from "lucide-react";
-import dynamic from "next/dynamic";
-
-const DotLottieReact = dynamic(
-  () => import("@lottiefiles/dotlottie-react").then((mod) => mod.DotLottieReact),
-  { ssr: false }
-);
 
 // Mockup 1: Library Operations Dashboard Mockup (Cataloging & Inventory Tabs)
 function LibraryOperationsMockup() {
@@ -254,16 +243,6 @@ function AIIntelligenceMockup() {
   );
 }
 
-// Icons mapping for the 6 core features
-const FEATURE_ICONS = [
-  Barcode,       // Barcode Cataloging
-  QrCode,        // QR-Based Issue & Return
-  Search,        // Smart Book Discovery
-  Sliders,       // Configurable Rules
-  Contact,       // Digital Membership Cards
-  FileText       // Government-Grade Reporting
-];
-
 const MOCKUP_TABS = [
   { id: "ops", label: "Library Operations", component: LibraryOperationsMockup, desc: "Barcode cataloging, real-time inventory adjustments, and loan processing dashboards." },
   { id: "repo", label: "Digital Repository", component: DigitalRepositoryMockup, desc: "Online document preservation engine supporting upload, synchronization, and secure browsing." },
@@ -277,149 +256,142 @@ export function FeaturesSection() {
   const currentDesc = MOCKUP_TABS.find(t => t.id === activeTab)?.desc || "";
 
   return (
-    <section id="features" className="bg-[#F3F2EE] py-16 md:py-20 border-b border-[#E4E7EC]/40 ">
-      <Container>
-        
-        {/* Section Header */}
-        <div className="text-left mb-12">
-          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block mb-3">
-            PLATFORM HIGHLIGHTS —
-          </span>
-          <h2 className="section-heading-custom text-[#0B1F3A] leading-[1.1] tracking-tight">
-            {FEATURES_HIGHLIGHT.title}
-          </h2>
-        </div>
+    <>
+      {/* Desktop view: Immersive scroll-linked concentric circular features orbit */}
+      <div className="hidden md:block">
+        <ScrollingFeatures />
+      </div>
 
-        {/* 6-column features grid */}
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1280px] mx-auto mb-16"
-        >
-          {FEATURES_HIGHLIGHT.cards.map((card, index) => {
-            const IconComponent = FEATURE_ICONS[index] || Barcode;
+      {/* Mobile view: Standard responsive features grid with interactive mockup preview */}
+      <div className="block md:hidden">
+        <section id="features-mobile" className="bg-[#F3F2EE] py-16 border-b border-[#E4E7EC]/40">
+          <Container>
+            
+            {/* Section Header */}
+            <div className="text-left mb-12">
+              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block mb-3">
+                PLATFORM HIGHLIGHTS —
+              </span>
+              <h2 className="section-heading-custom text-[#0B1F3A] leading-[1.1] tracking-tight text-3xl font-extrabold">
+                {FEATURES_HIGHLIGHT.title}
+              </h2>
+            </div>
 
-            return (
-              <motion.div
-                key={card.title}
-                variants={cardItem}
-                className={`p-6 border flex flex-col justify-between min-h-[380px] group transition-all duration-300 ${card.theme.bg} ${card.theme.border} ${card.theme.glow}`}
-              >
-                <div className="space-y-4 flex-1 mb-6">
-                  {/* Icon Box */}
-                  <span className={`w-10 h-10 rounded-xl border flex items-center justify-center shadow-sm group-hover:scale-105 transition-all duration-300 ${card.theme.iconBox}`}>
-                    <IconComponent size={20} />
-                  </span>
+            {/* 6-column features list for mobile */}
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              className="grid grid-cols-1 gap-6 w-full mb-16"
+            >
+              {FEATURES_HIGHLIGHT.cards.map((card) => {
+                return (
+                  <motion.div
+                    key={card.title}
+                    variants={cardItem}
+                    className={`p-6 border flex flex-col justify-between min-h-[360px] group transition-all duration-300 ${card.theme.bg} ${card.theme.border} ${card.theme.glow}`}
+                  >
+                    <div className="space-y-4 flex-1 mb-6">
+                      <div className="space-y-2">
+                        <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
+                          {card.title}
+                        </h3>
+                        <p className="text-xs text-[#5E6573] leading-relaxed">
+                          {card.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Feature image container */}
+                    <div className="bg-white rounded-2xl border border-[#E4E7EC] shadow-sm flex items-center justify-center h-44 overflow-hidden relative group-hover:shadow-md transition-shadow duration-300">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+
+            {/* Interactive Preview for mobile */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white border border-[#E4E7EC] p-6 shadow-[0_12px_30px_rgba(11,31,58,0.02)] w-full mx-auto relative overflow-hidden"
+            >
+              {/* Accent strip */}
+              <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#0B1F3A]" />
+
+              <div className="flex flex-col gap-6 relative z-10">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-[#C89B3C] font-bold text-xs uppercase tracking-wider">
+                    <LayoutGrid size={16} />
+                    <span>Interactive Preview</span>
+                  </div>
                   
-                  {/* Title & Description */}
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
-                      {card.title}
-                    </h3>
-                    <p className="text-xs text-[#5E6573] leading-relaxed">
-                      {card.description}
-                    </p>
+                  <h3 className="text-xl font-bold text-[#0B1F3A] tracking-tight leading-tight">
+                    Experience the Core Management Dashboard
+                  </h3>
+                  
+                  <p className="text-xs text-[#5E6573] leading-relaxed">
+                    Toggle through the tabs below to preview the live interface layouts designed specifically for BARTI administrative officers.
+                  </p>
+                </div>
+
+                {/* Navigation button tabs */}
+                <div className="flex flex-col gap-2">
+                  {MOCKUP_TABS.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`text-left px-4 py-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition-all duration-300 ${
+                        activeTab === tab.id
+                          ? "bg-[#0B1F3A] border-[#0B1F3A] text-white shadow-md"
+                          : "bg-[#FAFAF8] border-[#E4E7EC] text-[#4A515E]"
+                      }`}
+                    >
+                      <span>{tab.label}</span>
+                      <ArrowRight size={14} className={activeTab === tab.id ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2"} />
+                    </button>
+                  ))}
+                </div>
+
+                {/* Display Area */}
+                <div className="flex flex-col justify-center bg-[#FAFAF8] border border-[#E4E7EC]/60 rounded-2xl p-4 relative min-h-[220px]">
+                  <div className="space-y-4">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={activeTab}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <CurrentMockup />
+                      </motion.div>
+                    </AnimatePresence>
+
+                    <motion.p
+                      key={`desc-${activeTab}`}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="text-[10px] text-[#5E6573] leading-relaxed text-center font-medium italic pt-1"
+                    >
+                      {currentDesc}
+                    </motion.p>
                   </div>
                 </div>
-
-                {/* Lottie Animation container at the bottom */}
-                <div className="bg-white rounded-2xl border border-[#E4E7EC] shadow-sm p-4 flex items-center justify-center h-44 overflow-hidden relative group-hover:shadow-md transition-shadow duration-300">
-                  <DotLottieReact
-                    src={card.lottie}
-                    loop
-                    autoplay
-                    className="w-full h-full max-h-[140px]"
-                  />
-                </div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* Premium System Preview Dashboard (Tabs-based Mockups showcase) */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-white border border-[#E4E7EC]  p-6 md:p-8 shadow-[0_12px_30px_rgba(11,31,58,0.02)] w-full max-w-[1280px] mx-auto relative overflow-hidden"
-        >
-          {/* Accent strip */}
-          <div className="absolute top-0 left-0 right-0 h-[4px] bg-[#0B1F3A]" />
-
-          <div className="flex flex-col lg:flex-row items-stretch gap-8 relative z-10">
-            {/* Left side: Navigation tabs & details */}
-            <div className="lg:w-[45%] flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="flex items-center gap-2 text-[#C89B3C] font-bold text-xs uppercase tracking-wider">
-                  <LayoutGrid size={16} />
-                  <span>Interactive Preview</span>
-                </div>
-                
-                <h3 className="text-xl md:text-2xl font-bold text-[#0B1F3A] tracking-tight leading-tight">
-                  Experience the Core Management Dashboard
-                </h3>
-                
-                <p className="text-xs text-[#5E6573] leading-relaxed">
-                  Toggle through the tabs below to preview the live interface layouts designed specifically for BARTI administrative officers and visiting scholars.
-                </p>
               </div>
+            </motion.div>
 
-              {/* Navigation button tabs */}
-              <div className="flex flex-col gap-2.5">
-                {MOCKUP_TABS.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`text-left px-4 py-3 rounded-xl border text-xs font-semibold flex items-center justify-between transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? "bg-[#0B1F3A] border-[#0B1F3A] text-white shadow-md"
-                        : "bg-[#FAFAF8] border-[#E4E7EC] text-[#4A515E] hover:bg-[#F3F2EE]"
-                    }`}
-                  >
-                    <span>{tab.label}</span>
-                    <ArrowRight size={14} className={activeTab === tab.id ? "opacity-100 translate-x-0 transition-all" : "opacity-0 -translate-x-2 transition-all"} />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Right side: Mockup Display Area with active animation */}
-            <div className="lg:w-[55%] flex flex-col justify-center bg-[#FAFAF8] border border-[#E4E7EC]/60 rounded-2xl p-6 relative min-h-[260px]">
-              <div className="absolute top-2 left-4 text-[8.5px] uppercase font-bold text-[#5E6573]/60 tracking-widest select-none">
-                Interface Preview
-              </div>
-              
-              <div className="space-y-4 pt-2">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeTab}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <CurrentMockup />
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Subtext describing active preview */}
-                <motion.p
-                  key={`desc-${activeTab}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-[11px] text-[#5E6573] leading-relaxed text-center font-medium italic pt-1"
-                >
-                  {currentDesc}
-                </motion.p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-      </Container>
-    </section>
+          </Container>
+        </section>
+      </div>
+    </>
   );
 }
