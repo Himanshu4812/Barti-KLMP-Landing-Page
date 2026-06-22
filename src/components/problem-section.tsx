@@ -129,9 +129,9 @@ function MobileCard({ card }: { card: CardType }) {
       </div>
 
       {/* Bottom half: Image */}
-      <div className="h-56 relative bg-[#F9FAFB] border-t border-[#E4E7EC]/50 overflow-hidden flex items-center justify-center p-6">
+      <div className="h-72 relative bg-[#F9FAFB] border-t border-[#E4E7EC]/50 overflow-hidden flex items-center justify-center p-4">
         <div className="absolute inset-0 bg-[radial-gradient(#E4E7EC_1px,transparent_1px)] [background-size:14px_14px] opacity-40" />
-        <div className="relative w-full h-full max-w-[80%] max-h-[80%] mix-blend-multiply flex items-center justify-center">
+        <div className="relative w-full h-full max-w-[90%] max-h-[90%] mix-blend-multiply flex items-center justify-center">
           <Image
             src={card.image}
             alt={card.title}

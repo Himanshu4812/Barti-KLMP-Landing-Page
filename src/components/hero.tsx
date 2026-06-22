@@ -83,6 +83,12 @@ export function Hero() {
             <div className="flex items-center gap-6 pt-2">
               <a
                 href="#features"
+                onClick={(e) => {
+                  if (window.innerWidth < 768) {
+                    e.preventDefault();
+                    document.getElementById("features-mobile")?.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0B1F3A] text-white hover:bg-[#C89B3C] hover:text-[#0B1F3A] text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow"
               >
                 Explore Features

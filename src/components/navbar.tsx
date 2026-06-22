@@ -176,7 +176,13 @@ export function Navbar() {
                   <a
                     key={link.label}
                     href={link.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => {
+                      setMobileOpen(false);
+                      if (link.href === "#features" && window.innerWidth < 768) {
+                        e.preventDefault();
+                        document.getElementById("features-mobile")?.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
                     className="block text-[#0B1F3A] text-sm font-bold uppercase tracking-wider hover:text-[#C89B3C] transition-colors py-3.5 border-b border-[#E4E7EC]/50 last:border-0"
                   >
                     {link.label}
