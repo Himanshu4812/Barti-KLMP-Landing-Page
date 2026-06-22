@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "@/components/container";
-import { WHY_CHOOSE } from "@/lib/constants";
+import { WHY_CHOOSE } from "@/lib/features";
 import { staggerContainer, cardItem } from "@/lib/animations";
 
 const CARD_IMAGES = [
@@ -25,8 +25,14 @@ const CARD_BG_COLORS = [
 
 export function WhyChooseSection() {
   return (
-    <section id="why-choose" className="bg-[#FAFAF8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
+    <section id="why-choose" className="bg-[#F5E6C8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
       
+      {/* Top blur transition from previous section */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FAFAF8] to-transparent pointer-events-none z-10" />
+
+      {/* Bottom blur transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#FAFAF8] to-transparent pointer-events-none z-10" />
+
       {/* Dynamic background element */}
       <div className="absolute right-0 top-0 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(200,155,60,0.02),transparent_70%)] pointer-events-none" />
 
@@ -60,27 +66,27 @@ export function WhyChooseSection() {
               >
                 {/* Dynamic Background Image */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700 ease-out pointer-events-none z-0"
+                  className="absolute inset-0 bg-cover bg-center opacity-100 scale-100 lg:opacity-0 lg:scale-105 lg:group-hover:opacity-100 lg:group-hover:scale-100 transition-all duration-700 ease-out pointer-events-none z-0"
                   style={{ backgroundImage: `url(${CARD_IMAGES[index]})` }}
                 />
 
                 {/* Dark Gradient Overlay */}
                 <div 
-                  className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/20 via-[#0B1F3A]/45 to-[#0B1F3A]/65 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/20 via-[#0B1F3A]/45 to-[#0B1F3A]/65 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
                 />
 
                 {/* Content Container (elevated above background) */}
                 <div className="relative z-20 space-y-4 flex flex-col justify-between h-full w-full">
                   {/* Serif Typographic Index */}
-                  <span className="text-2xl font-serif font-bold text-[#C89B3C] block select-none group-hover:text-white transition-colors duration-300">
+                  <span className="text-2xl font-serif font-bold text-white lg:text-[#C89B3C] block select-none lg:group-hover:text-white transition-colors duration-300">
                     {numStr}
                   </span>
 
                   <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight group-hover:text-[#C89B3C] transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-[#C89B3C] lg:text-[#0B1F3A] tracking-tight lg:group-hover:text-[#C89B3C] transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <p className="text-xs text-[#5E6573] group-hover:text-slate-200/90 leading-relaxed transition-colors duration-300">
+                    <p className="text-xs text-slate-200/90 lg:text-[#5E6573] lg:group-hover:text-slate-200/90 leading-relaxed transition-colors duration-300">
                       {card.description}
                     </p>
                   </div>
