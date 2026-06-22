@@ -1,5 +1,20 @@
 # BARTI Knowledge & Library Management Platform
 
+<p align="center">
+  <img src="public/images/feature/Smart%20Book%20Discovery.jpg" alt="BARTI KLMP Platform Screenshot" width="800" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS v4" />
+  <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
+  <img src="https://img.shields.io/badge/License-Proprietary-0B1F3A?style=for-the-badge" alt="License: Proprietary" />
+</p>
+
 A modern, institutional-grade web platform for the **BARTI Knowledge & Library Management Platform (KLMP)** — designed to digitize, preserve, organize and democratize access to Ambedkarite literature, constitutional studies, social justice resources and public knowledge archives.
 
 Built for **Dr. Babasaheb Ambedkar Research and Training Institute (BARTI)**, Government of Maharashtra.
@@ -78,14 +93,6 @@ Fonts are loaded via `next/font/google` as CSS variables:
 | Animation | Framer Motion 12.40.0 |
 | Icons | Lucide React |
 | Fonts | Inter + Instrument Serif (via `next/font/google`) |
-| Backend | Supabase (SSR client + middleware) |
-| State Management | Zustand |
-| Forms | React Hook Form + Zod |
-| Charts | Recharts |
-| Tables | TanStack React Table |
-| Barcode | html5-qrcode, qrcode |
-| PDF | jsPDF |
-| Spreadsheets | xlsx |
 | Package Manager | npm |
 
 ---
@@ -97,41 +104,25 @@ barti-klmp/
 ├── public/
 │   └── images/
 │       ├── discovery/                  # 6 discovery category background images
+│       ├── feature/                    # 6 feature screenshots (Barcode, QR, Smart Discovery, etc.)
+│       ├── why-choose/                 # 6 why-choose illustrations
 │       ├── library_hero_bg.png         # Hero section background
 │       ├── parliament_sketch_clean.png # Stats + Why This Matters watermark
 │       ├── ambedkar_books_sketch_clean.png  # CTA section sketch
 │       ├── readers_sketch_clean.png    # Benefits section sketch
+│       ├── page_turn.webm              # Hero section video asset
 │       └── ...sketch variants
 ├── src/
 │   ├── app/
-│   │   ├── globals.css                 # Design tokens, theme, font classes
-│   │   ├── layout.tsx                  # Root layout (fonts, metadata)
+│   │   ├── globals.css                 # Design tokens, theme, font classes (Tailwind v4)
+│   │   ├── layout.tsx                  # Root layout (fonts, metadata, SEO)
 │   │   ├── page.tsx                    # Landing page section composition
-│   │   ├── middleware.ts               # Supabase auth middleware
-│   │   ├── (public)/                   # Public route group
-│   │   │   ├── layout.tsx             # Navbar + Footer wrapper
-│   │   │   ├── about/page.tsx
-│   │   │   ├── catalog/page.tsx
-│   │   │   ├── contact/page.tsx
-│   │   │   └── book/[id]/page.tsx
-│   │   ├── (dashboard)/               # Dashboard route group
-│   │   │   ├── layout.tsx             # Sidebar + TopNavbar layout
-│   │   │   ├── page.tsx
-│   │   │   ├── books/page.tsx
-│   │   │   ├── members/page.tsx
-│   │   │   ├── users/page.tsx
-│   │   │   ├── visitors/page.tsx
-│   │   │   ├── issues/page.tsx
-│   │   │   ├── reservations/page.tsx
-│   │   │   ├── repository/page.tsx
-│   │   │   ├── reports/page.tsx
-│   │   │   ├── settings/page.tsx
-│   │   │   └── ai/page.tsx
-│   │   └── auth/
-│   │       ├── login/page.tsx
-│   │       └── callback/route.ts
+│   │   ├── icon.tsx                    # Dynamic SVG favicon (navy + gold)
+│   │   └── (public)/                   # Public route group (other routes handled separately)
+│   │       ├── layout.tsx             # Navbar + Footer wrapper
+│   │       └── contact/page.tsx
 │   ├── components/
-│   │   ├── ui/                        # shadcn/ui primitives
+│   │   ├── ui/                        # shadcn/ui primitives (base-nova style)
 │   │   │   └── button.tsx
 │   │   ├── shared/                    # Shared app components
 │   │   │   ├── modal.tsx
@@ -143,18 +134,14 @@ barti-klmp/
 │   │   │   ├── search-input.tsx
 │   │   │   ├── page-header.tsx
 │   │   │   └── role-guard.tsx
-│   │   ├── dashboard/                 # Dashboard-specific components
-│   │   │   ├── sidebar.tsx
-│   │   │   ├── top-navbar.tsx
-│   │   │   ├── breadcrumbs.tsx
-│   │   │   └── demo-mode-guard.tsx
 │   │   ├── navbar.tsx                 # Fixed scroll-aware navbar
 │   │   ├── hero.tsx                   # Two-column hero with preview card
 │   │   ├── why-this-matters-section.tsx
 │   │   ├── problem-section.tsx        # 3 challenge cards
-│   │   ├── vision-section.tsx         # 3-step transformation journey
-│   │   ├── modules-section.tsx        # 4 capability cards with mockups
-│   │   ├── discovery-section.tsx      # 6-category knowledge grid
+│   │   ├── objectives-section.tsx     # 3-stage transformation journey
+│   │   ├── modules-section.tsx        # 4 capability cards with feature mockups
+│   │   ├── why-choose-section.tsx     # 6 value proposition cards
+│   │   ├── discovery-section.tsx      # 6-category knowledge discovery grid
 │   │   ├── benefits-barti-section.tsx # Org cards + benefits card
 │   │   ├── stats-section.tsx          # 4 impact metrics
 │   │   ├── cta-section.tsx            # Call-to-action
@@ -164,16 +151,18 @@ barti-klmp/
 │   │   └── footer.tsx                 # 5-column institutional footer
 │   └── lib/
 │       ├── animations.ts              # Framer Motion variants
-│       ├── constants.ts               # All site content and data
+│       ├── constants.ts               # All site content and data (deprecated → features.ts)
+│       ├── features.ts                # Centralized content and feature data
 │       ├── types.ts                   # TypeScript interfaces
-│       ├── utils.ts                   # cn() utility
-│       └── stores/                    # Zustand state stores
+│       └── utils.ts                   # cn() utility (clsx + tailwind-merge)
 ├── .env.example
 ├── next.config.ts
+├── postcss.config.mjs                 # Tailwind v4 PostCSS plugin
+├── components.json                    # shadcn/ui config (base-nova)
+├── netlify.toml                       # Netlify deployment config
+├── eslint.config.mjs                  # ESLint config (Next.js + TypeScript)
 ├── package.json
-├── tsconfig.json
-├── postcss.config.mjs
-└── components.json                    # shadcn/ui config
+└── tsconfig.json
 ```
 
 ---
@@ -188,13 +177,14 @@ The page follows a mandatory section order defined in `src/app/page.tsx`:
 | 2 | **Hero** | — | Two-column layout (35/65). Left: tagline, headline, CTAs. Right: library background with curved divider + interactive repository card (search, collections grid, recent publications) |
 | 3 | **Why This Matters** | `#why-this-matters` | Mission statement with parliament sketch watermark |
 | 4 | **Problem / Challenges** | `#challenges` | 3 equal-height cards: Operational Gaps, Reader Experience, Management Blind Spots |
-| 5 | **Vision / Transformation Journey** | `#journey` | 3-stage horizontal flow: Traditional Library → Digital Repository → Knowledge Intelligence |
+| 5 | **Objectives / Transformation Journey** | `#objectives` | 3-stage horizontal flow: Traditional Library → Digital Repository → Knowledge Intelligence |
 | 6 | **Core Platform Capabilities** | `#capabilities` | 4-column grid: Library Operations, Digital Repository, Knowledge Discovery, AI Intelligence — each with interactive UI mockup |
-| 7 | **Knowledge Discovery** | `#discovery` | 3x2 grid of 6 knowledge categories (Google Books aesthetic) with background images |
-| 8 | **Benefits for BARTI & Readers** | `#benefits` | Two-column: 4 organization-type cards + benefits card with checklist |
-| 9 | **Platform Impact** | — | 4 large statistics with gold metrics (books, members, availability, uptime) |
-| 10 | **CTA** | `#cta` | Join the Movement section with primary action button |
-| 11 | **Footer** | — | 5-column layout: Platform, Collections, Resources, Government, Contact |
+| 7 | **Why Choose BARTI KLMP** | `#why-choose` | 6 value proposition cards: AI Intelligence, Ambedkar Heritage, Citizen Access, Data-Driven Decisions, Government Institution, Scalable Network |
+| 8 | **Knowledge Discovery** | `#discovery` | 3x2 grid of 6 knowledge categories (Google Books aesthetic) with background images |
+| 9 | **Benefits for BARTI & Readers** | `#benefits` | Two-column: 4 organization-type cards + benefits card with checklist |
+| 10 | **Platform Impact** | — | 4 large statistics with gold metrics (books, members, availability, uptime) |
+| 11 | **CTA** | `#cta` | Join the Movement section with primary action button |
+| 12 | **Footer** | — | 5-column layout: Platform, Collections, Resources, Government, Contact |
 
 ---
 
@@ -211,7 +201,7 @@ All animations use `framer-motion` with variants defined in `src/lib/animations.
 | `scaleIn` | opacity 0→1, scale 0.9→1 | 0.5s | easeOut |
 | `countUpVariants` | opacity 0→1 | 0.5s | — |
 
-**Scroll-triggered card grids** (problem, vision, modules, discovery, benefits, stats sections):
+**Scroll-triggered card grids** (problem, objectives, modules, discovery, benefits, stats sections):
 - Container uses `staggerContainer` + `whileInView`
 - Child cards use `cardItem`
 - Fires once on first scroll (`viewport: { once: true, margin: "-80px" }`)
@@ -220,9 +210,24 @@ All animations use `framer-motion` with variants defined in `src/lib/animations.
 
 ---
 
+## Feature Screenshots
+
+| Feature | Screenshot |
+|---------|-----------|
+| **Smart Book Discovery** — Advanced search and browse interface with faceted filters | <img src="public/images/feature/Smart%20Book%20Discovery.jpg" alt="Smart Book Discovery" width="400" /> |
+| **Barcode-Driven Cataloging** — Scan and catalog books using barcode technology | <img src="public/images/feature/Barcode-Driven%20Cataloging.jpg" alt="Barcode-Driven Cataloging" width="400" /> |
+| **QR-Based Issue & Return** — Quick book issue and return via QR code scanning | <img src="public/images/feature/QR-Based%20Issue%20&%20Return.webp" alt="QR-Based Issue & Return" width="400" /> |
+| **Digital Membership Cards** — Paperless membership with digital card generation | <img src="public/images/feature/Digital%20Membership%20Cards.jpg" alt="Digital Membership Cards" width="400" /> |
+| **Configurable Rules Engine** — Flexible borrowing rules, fine policies, and access control | <img src="public/images/feature/Configurable%20Rules%20Engine.png" alt="Configurable Rules Engine" width="400" /> |
+| **Government-Grade Reporting** — Comprehensive reports and analytics dashboard | <img src="public/images/feature/Government-Grade%20Reporting.webp" alt="Government-Grade Reporting" width="400" /> |
+
+---
+
 ## Image Assets
 
-### Hero & Sketches
+All image assets are stored in `public/images/`.
+
+### Sketches & Backgrounds
 
 | File | Usage | Position |
 |------|-------|----------|
@@ -230,6 +235,8 @@ All animations use `framer-motion` with variants defined in `src/lib/animations.
 | `parliament_sketch_clean.png` | Stats section watermark + Why This Matters background | Bottom-right, 20-40% opacity |
 | `ambedkar_books_sketch_clean.png` | CTA section background | Bottom-right, 40% opacity |
 | `readers_sketch_clean.png` | Benefits card watermark | Bottom-right, 40% opacity |
+| `library_footer_bg.png` | Footer background | Full width |
+| `page_turn.webm` | Hero section video animation | Right column overlay |
 
 ### Discovery Categories
 
@@ -242,17 +249,33 @@ All animations use `framer-motion` with variants defined in `src/lib/animations.
 | `discovery/archives.png` | Archives & Documents |
 | `discovery/government_publications.png` | Government Publications |
 
+### Why Choose Illustrations
+
+| File | Card Title |
+|------|-----------|
+| `why-choose/ai_intelligence.png` | AI-Powered Intelligence |
+| `why-choose/ambedkar_heritage.png` | Ambedkarite Heritage |
+| `why-choose/citizen_access.png` | Citizen Access |
+| `why-choose/data_decisions.png` | Data-Driven Decisions |
+| `why-choose/gov_institution.png` | Government Institution |
+| `why-choose/scalable_network.png` | Scalable Network |
+
 ---
 
-## Design Specification
+## Prerequisites
 
-This project is built from the **BARTI_KLMP_Design.md** specification — the single source of truth governing all design decisions, layout rules, and content. Refer to it for detailed section-by-section requirements.
+- **Node.js** 18+ (LTS recommended)
+- **npm** (ships with Node.js)
 
 ---
 
 ## Getting Started
 
 ```bash
+# Clone the repository
+git clone <repo-url>
+cd barti-klmp
+
 # Install dependencies
 npm install
 
@@ -273,14 +296,18 @@ Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ---
 
-## Environment Variables
+## Deployment
 
-Copy `.env.example` to `.env.local` and configure:
+The project is configured for **Netlify** deployment via `netlify.toml`:
 
-| Variable | Description |
-|----------|-------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anonymous key |
+```toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+  plugins = ["@netlify/plugin-nextjs"]
+```
+
+Deploy by linking your Netlify project to the repository — the build settings are auto-detected from `netlify.toml`.
 
 ---
 
