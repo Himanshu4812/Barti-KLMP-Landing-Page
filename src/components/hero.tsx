@@ -14,10 +14,10 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen w-full bg-[#FAFAF8] overflow-hidden pt-[96px]">
+    <section className="relative min-h-[90vh] md:min-h-screen w-full bg-[#FAFAF8] overflow-hidden pt-[140px]">
       
       {/* Right Side - Cinematic Warm Library Background */}
-      <div className="absolute top-0 right-0 w-full lg:w-[65%] h-full bg-[#FAFAF8] hidden lg:block pointer-events-none z-0">
+      <div className="absolute top-0 right-0 w-full lg:w-[65%] h-full bg-[#FAFAF8] pointer-events-none z-0">
         <div className="relative w-full h-full">
           <video
             ref={videoRef}
@@ -26,13 +26,13 @@ export function Hero() {
             playsInline
             autoPlay
             onTimeUpdate={handleTimeUpdate}
-            className="absolute inset-0 w-full h-full object-cover object-right opacity-95"
+            className="absolute inset-0 w-full h-full object-cover object-right opacity-40 lg:opacity-95"
             suppressHydrationWarning
           >
             <source src="/images/page_turn.webm" type="video/webm" />
           </video>
           {/* Cinematic lighting enhancement overlays */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FAFAF8] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF8]/95 via-[#FAFAF8]/70 to-[#FAFAF8]/95 lg:bg-gradient-to-r lg:from-[#FAFAF8] lg:via-transparent lg:to-transparent" />
           <div className="absolute inset-0 bg-amber-950/5 mix-blend-color-burn" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10" />
           
@@ -82,10 +82,10 @@ export function Hero() {
             {/* CTAs */}
             <div className="flex items-center gap-6 pt-2">
               <a
-                href="#discovery"
+                href="#features"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#0B1F3A] text-white hover:bg-[#C89B3C] hover:text-[#0B1F3A] text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow"
               >
-                Explore Collections
+                Explore Features
                 <ChevronRight size={16} />
               </a>
           </div>
