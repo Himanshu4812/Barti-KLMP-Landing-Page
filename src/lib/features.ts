@@ -2,7 +2,6 @@ export const NAV_LINKS = [
   { label: "Solution", href: "#challenges" },
   { label: "Features", href: "#features" },
   { label: "Why Choose", href: "#why-choose" },
-  { label: "Discovery", href: "#discovery" },
 ] as const;
 
 export const HERO = {
@@ -87,7 +86,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Barcode-Driven Cataloging",
       description: "Scan ISBN barcode to auto-fetch book metadata and fill details instantly. Reduces manual entry errors and speeds up catalog creation.",
-      lottie: "/features/Scanner File.lottie",
+      image: "/images/feature/Barcode-Driven Cataloging.jpg",
       theme: {
         bg: "bg-[#F0F7FF]/60",
         border: "border-[#D6E4FF]",
@@ -98,7 +97,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "QR-Based Issue & Return",
       description: "Staff scan Member QR card and Book Barcode. System auto-updates inventory, calculates overdue days and marks return in real-time.",
-      lottie: "/features/QR Scan.lottie",
+      image: "/images/feature/QR-Based Issue & Return.webp",
       theme: {
         bg: "bg-[#F6FFED]/60",
         border: "border-[#D9F7BE]",
@@ -109,7 +108,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Smart Book Discovery",
       description: "Public portal with advanced search by title, author, subject, language. Filters for Ambedkar literature, social justice, law, constitution and more.",
-      lottie: "/features/books.lottie",
+      image: "/images/feature/Smart Book Discovery.jpg",
       theme: {
         bg: "bg-[#FFF7E6]/60",
         border: "border-[#FFE7BA]",
@@ -120,7 +119,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Configurable Rules Engine",
       description: "Set borrowing limits per member type (student, scholar, officer), custom fine amounts, and duration policies — all configurable by administrators.",
-      lottie: "/features/database.lottie",
+      image: "/images/feature/Configurable Rules Engine.png",
       theme: {
         bg: "bg-[#F9F0FF]/60",
         border: "border-[#EFDBFF]",
@@ -131,7 +130,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Digital Membership Cards",
       description: "Unique QR-coded membership cards for each member, used seamlessly during all issue and return transactions at the library.",
-      lottie: "/features/Card.lottie",
+      image: "/images/feature/Digital Membership Cards.jpg",
       theme: {
         bg: "bg-[#F0FDF4]/60",
         border: "border-[#DCFCE7]",
@@ -142,7 +141,7 @@ export const FEATURES_HIGHLIGHT = {
     {
       title: "Government-Grade Reporting",
       description: "Generate monthly, quarterly and annual reports exportable to PDF and Excel for management, government submissions and audit purposes.",
-      lottie: "/features/Reports.lottie",
+      image: "/images/feature/Government-Grade Reporting.webp",
       theme: {
         bg: "bg-[#FFF1F0]/60",
         border: "border-[#FFD8BF]",

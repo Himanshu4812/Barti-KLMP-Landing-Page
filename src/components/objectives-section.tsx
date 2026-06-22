@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Container } from "@/components/container";
-import { OBJECTIVES } from "@/lib/constants";
+import { OBJECTIVES } from "@/lib/features";
 import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
 
 export function ObjectivesSection() {
