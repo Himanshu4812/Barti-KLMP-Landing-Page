@@ -59,7 +59,7 @@ export function HomePage() {
     <div 
       ref={containerRef} 
       id="features"
-      className="relative min-h-[180vh] bg-[#FCFCFB] w-full border-y border-black/5"
+      className="relative min-h-[180vh] bg-[#FCFCFB] w-full border-y border-black/5 scroll-mt-[-50px]"
     >
       {/* Sticky viewport area */}
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
@@ -72,7 +72,7 @@ export function HomePage() {
         <div className="relative flex items-center justify-center w-full max-w-4xl h-[600px]">
           {/* Concentric Circle 1 (Outer) */}
           <div
-            className="absolute rounded-full border border-black/5 transition-all duration-300 ease-out"
+            className="absolute rounded-full border border-[#0B1F3A]/20 bg-[#0B1F3A]/[0.02] transition-all duration-300 ease-out"
             style={{
               width: `${440 + scrollProgress * 100}px`,
               height: `${440 + scrollProgress * 100}px`,
@@ -82,7 +82,7 @@ export function HomePage() {
 
           {/* Concentric Circle 2 (Middle) */}
           <div
-            className="absolute rounded-full border border-[#C89B3C]/15 transition-all duration-300 ease-out"
+            className="absolute rounded-full border border-[#C89B3C]/30 bg-[#C89B3C]/[0.03] transition-all duration-300 ease-out"
             style={{
               width: `${350 + scrollProgress * 80}px`,
               height: `${350 + scrollProgress * 80}px`,

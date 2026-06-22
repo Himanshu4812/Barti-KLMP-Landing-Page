@@ -25,7 +25,7 @@ const CARD_BG_COLORS = [
 
 export function WhyChooseSection() {
   return (
-    <section id="why-choose" className="bg-[#F5E6C8] py-16 md:py-20 border-b border-[#E4E7EC]/40 relative overflow-hidden ">
+    <section id="why-choose" className="bg-[#F5E6C8] py-16 md:py-20 scroll-mt-[-50px] border-b border-[#E4E7EC]/40 relative overflow-hidden ">
       
       {/* Top blur transition from previous section */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#FAFAF8] to-transparent pointer-events-none z-10" />
