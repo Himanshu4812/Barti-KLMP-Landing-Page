@@ -6,12 +6,13 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/features";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [navbarHidden, setNavbarHidden] = useState(false);
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -31,11 +32,23 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Listen to Features section scroll to hide/show navbar
+  useEffect(() => {
+    const handleHideNav = (e: Event) => {
+      setNavbarHidden((e as CustomEvent).detail);
+    };
+    window.addEventListener("hidenavbar", handleHideNav);
+    return () => window.removeEventListener("hidenavbar", handleHideNav);
+  }, []);
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -15 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      animate={{ 
+        opacity: navbarHidden ? 0 : 1, 
+        y: navbarHidden ? -120 : 0 
+      }}
+      transition={{ duration: 0.45, ease: "easeInOut" }}
       className="fixed top-0 left-0 right-0 z-50 w-full pointer-events-none flex justify-center py-4 md:py-6 px-4 md:px-8"
     >
       <div className="relative w-full max-w-[1280px] flex flex-col items-center">
