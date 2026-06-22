@@ -175,22 +175,22 @@ export function Footer() {
               </h4>
               <ul className="space-y-2.5 text-sm text-white/70 font-sans">
                 <li>
-                  <Link href="/#features" className="hover:text-[#C89B3C] transition-colors">
+                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
                     Library Operations
                   </Link>
                 </li>
                 <li>
-                  <Link href="/catalog" className="hover:text-[#C89B3C] transition-colors">
+                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
                     Digital Repository
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#discovery" className="hover:text-[#C89B3C] transition-colors">
+                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
                     Smart Discovery
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#features" className="hover:text-[#C89B3C] transition-colors">
+                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
                     AI Intelligence
                   </Link>
                 </li>
@@ -204,18 +204,13 @@ export function Footer() {
               </h4>
               <ul className="space-y-2.5 text-sm text-white/70 font-sans">
                 <li>
-                  <Link href="/about" className="hover:text-[#C89B3C] transition-colors">
-                    About Platform
-                  </Link>
-                </li>
-                <li>
                   <Link href="/#objectives" className="hover:text-[#C89B3C] transition-colors">
                     Our Objectives
                   </Link>
                 </li>
                 <li>
-                  <Link href="/catalog" className="hover:text-[#C89B3C] transition-colors">
-                    Search Catalog
+                  <Link href="/#discovery" className="hover:text-[#C89B3C] transition-colors">
+                    Knowledge Discovery
                   </Link>
                 </li>
                 <li>
@@ -266,11 +261,11 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-4 font-sans">
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link href="#" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
             <span className="text-white/20">|</span>
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
           </div>

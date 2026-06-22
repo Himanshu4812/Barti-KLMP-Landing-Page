@@ -28,33 +28,37 @@ export function BenefitsBartiSection() {
               {/* Category 1 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F4F7FB] border-l-4 border-l-[#2563EB] border border-[#DCE4F0]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
+                className="bg-[#F4F7FB] border-l-4 border-l-[#2563EB] border border-[#DCE4F0]/60 p-6 flex flex-col items-start justify-center min-h-[90px] cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:bg-white transition-all duration-300 group"
               >
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Government Libraries</span>
+                <span className="text-[#2563EB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-lg leading-none">→</span>
               </motion.div>
 
               {/* Category 2 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#FDF6E2] border-l-4 border-l-[#D97706] border border-[#F5E6BE]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
+                className="bg-[#FDF6E2] border-l-4 border-l-[#D97706] border border-[#F5E6BE]/60 p-6 flex flex-col items-start justify-center min-h-[90px] cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:bg-white transition-all duration-300 group"
               >
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Universities &amp; Colleges</span>
+                <span className="text-[#D97706] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-lg leading-none">→</span>
               </motion.div>
 
               {/* Category 3 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F0F8F6] border-l-4 border-l-[#0D9488] border border-[#D1EBE5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
+                className="bg-[#F0F8F6] border-l-4 border-l-[#0D9488] border border-[#D1EBE5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:bg-white transition-all duration-300 group"
               >
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Research Institutions</span>
+                <span className="text-[#0D9488] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-lg leading-none">→</span>
               </motion.div>
 
               {/* Category 4 */}
               <motion.div
                 variants={cardItem}
-                className="bg-[#F8F5FC] border-l-4 border-l-[#6D28D9] border border-[#E8DEF5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] hover:shadow-sm transition-all duration-300 group"
+                className="bg-[#F8F5FC] border-l-4 border-l-[#6D28D9] border border-[#E8DEF5]/60 p-6 flex flex-col items-start justify-center min-h-[90px] cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:bg-white transition-all duration-300 group"
               >
                 <span className="text-sm font-bold text-[#0B1F3A] uppercase tracking-wide">Social Justice Orgs</span>
+                <span className="text-[#6D28D9] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-1 text-lg leading-none">→</span>
               </motion.div>
 
             </motion.div>
