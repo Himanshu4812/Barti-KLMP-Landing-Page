@@ -87,7 +87,7 @@ export function BenefitsBartiSection() {
 
             <div className="relative z-10 space-y-6">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block">
-                BENEFITS FOR BARTI &amp; READERS —
+                BENEFITS FOR <span className="font-serif font-black">BARTI</span> &amp; READERS —
               </span>
 
               <ul className="space-y-4 pt-1">

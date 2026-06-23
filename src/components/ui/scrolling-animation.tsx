@@ -21,19 +21,6 @@ export function HomePage() {
         // Calculate progress as scrolled ratio relative to sticky container
         const progress = Math.max(0, Math.min(1, -rect.top / totalScrollable))
         setScrollProgress(progress)
-
-        // Find the "Why Choose" section to measure its height dynamically
-        const whyChooseElement = document.getElementById("why-choose")
-        let whyChooseHeight = 800 // Fallback height estimate if not yet rendered
-        if (whyChooseElement) {
-          whyChooseHeight = whyChooseElement.getBoundingClientRect().height
-        }
-
-        // Hide navbar as soon as the features section enters the viewport (top < 100px)
-        // and keep it hidden until the user scrolls past half of the "Why Choose" section (bottom < -whyChooseHeight / 2)
-        const isInside = rect.top < 100 && rect.bottom > -(whyChooseHeight / 2)
-        const event = new CustomEvent("hidenavbar", { detail: isInside })
-        window.dispatchEvent(event)
       }
     }
 
@@ -45,15 +32,12 @@ export function HomePage() {
     return () => {
       window.removeEventListener("scroll", handleScroll)
       window.removeEventListener("resize", handleScroll)
-      
-      // Restore navbar on unmount
-      const event = new CustomEvent("hidenavbar", { detail: false })
-      window.dispatchEvent(event)
     }
   }, [])
 
-  // Orbit radius is driven by scroll progress (nested compactly just outside the central circle)
-  const expandRadius = scrollProgress * 270
+  // Elliptical orbit — wider on X-axis to fill left/right space, compact on Y-axis to avoid top/bottom overflow
+  const expandRadiusX = scrollProgress * 380
+  const expandRadiusY = scrollProgress * 200
 
   return (
     <div 
@@ -69,7 +53,7 @@ export function HomePage() {
         {/* Decorative Grid Lines */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.006)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.006)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
-        <div className="relative flex items-center justify-center w-full max-w-4xl h-[600px]">
+        <div className="relative flex items-center justify-center w-full max-w-6xl h-[600px] mt-16">
           {/* Concentric Circle 1 (Outer) */}
           <div
             className="absolute rounded-full border border-[#0B1F3A]/20 bg-[#0B1F3A]/[0.02] transition-all duration-300 ease-out"
@@ -92,12 +76,12 @@ export function HomePage() {
 
           {/* Central content ring container */}
           <div
-            className={`w-[280px] h-[280px] rounded-full p-[1.5px] bg-gradient-to-tr from-[#C89B3C]/80 via-[#C89B3C]/30 to-[#C89B3C]/80 shadow-[0_0_40px_rgba(200,155,60,0.08)] flex items-center justify-center relative z-20 transition-all duration-500 ${
+            className={`w-[240px] h-[240px] rounded-full p-[1.5px] bg-gradient-to-tr from-[#C89B3C]/80 via-[#C89B3C]/30 to-[#C89B3C]/80 shadow-[0_0_40px_rgba(200,155,60,0.08)] flex items-center justify-center relative z-20 transition-all duration-500 ${
               scrollProgress > 0.25 ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
           >
             {/* Inner Light circular content box */}
-            <div className="w-full h-full rounded-full bg-white flex flex-col items-center justify-center p-6 text-center border border-[#C89B3C]/10 shadow-inner">
+            <div className="w-full h-full rounded-full bg-white flex flex-col items-center justify-center p-4 text-center border border-[#C89B3C]/10 shadow-inner">
               <AnimatePresence mode="wait">
                 {hoveredIndex === null ? (
                   <motion.div
@@ -109,7 +93,7 @@ export function HomePage() {
                     className="flex flex-col items-center justify-center"
                   >
                     <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] mb-2">
-                      BARTI KLMP
+                      <span className="font-serif font-black">BARTI</span> KLMP
                     </span>
                     <h2 className="text-xl font-extrabold text-[#0B1F3A] tracking-tight leading-snug mb-2">
                       Core Feature Highlights
@@ -156,8 +140,8 @@ export function HomePage() {
             const rotationOffset = -Math.PI / 2
             const angle = (index * 2 * Math.PI) / 6 + rotationOffset
             
-            const x = expandRadius * Math.cos(angle)
-            const y = expandRadius * Math.sin(angle)
+            const x = expandRadiusX * Math.cos(angle)
+            const y = expandRadiusY * Math.sin(angle)
             const isHovered = hoveredIndex === index
 
             return (
@@ -172,14 +156,14 @@ export function HomePage() {
               >
                 {/* Feature Card Wrapper */}
                 <div
-                  className={`w-[150px] h-[170px] sm:w-[170px] sm:h-[190px] rounded-2xl overflow-hidden border transition-all duration-300 relative flex flex-col justify-between ${
+                  className={`w-[190px] h-[130px] sm:w-[210px] sm:h-[140px] rounded-xl overflow-hidden border transition-all duration-300 ${
                     isHovered
                       ? "border-[#C89B3C] shadow-[0_12px_35px_rgba(200,155,60,0.18)] scale-105 z-40 bg-white"
                       : "border-black/5 hover:border-black/10 shadow-lg bg-white"
                   }`}
                 >
                   {/* Image container */}
-                  <div className="w-full flex-1 overflow-hidden relative bg-[#FAF9F5]">
+                  <div className="w-full h-full overflow-hidden relative bg-[#FAF9F5]">
                     <img
                       src={card.image}
                       alt={card.title}
@@ -187,12 +171,6 @@ export function HomePage() {
                         isHovered ? "opacity-100 scale-105" : "opacity-85"
                       }`}
                     />
-                  </div>
-                  {/* Clean text bottom segment for 100% legibility */}
-                  <div className="bg-white border-t border-black/[0.04] px-2.5 py-2 flex items-center justify-center text-center h-[54px] w-full shrink-0">
-                    <span className="text-[10px] sm:text-[11.5px] font-bold text-[#0B1F3A] tracking-tight leading-snug">
-                      {card.title}
-                    </span>
                   </div>
                 </div>
               </div>

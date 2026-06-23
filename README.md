@@ -144,7 +144,6 @@ barti-klmp/
 │   │   ├── discovery-section.tsx      # 6-category knowledge discovery grid
 │   │   ├── benefits-barti-section.tsx # Org cards + benefits card
 │   │   ├── stats-section.tsx          # 4 impact metrics
-│   │   ├── cta-section.tsx            # Call-to-action
 │   │   ├── section-heading.tsx        # Reusable animated heading
 │   │   ├── section-wrapper.tsx        # Consistent section padding
 │   │   ├── container.tsx              # Max-width wrapper (1280px)

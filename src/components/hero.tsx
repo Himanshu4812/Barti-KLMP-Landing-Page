@@ -61,7 +61,7 @@ export function Hero() {
             {/* Headline */}
             <h1 className="hero-heading text-[#0B1F3A] leading-[0.95] tracking-tight">
               <span className="whitespace-nowrap">
-                BARTI{" "}
+                <span className="font-serif font-black">BARTI</span>{" "}
                 <span className="italic text-[#C89B3C] font-serif font-normal">
                   Knowledge
                 </span>

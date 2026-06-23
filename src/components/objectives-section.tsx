@@ -49,7 +49,7 @@ export function ObjectivesSection() {
 
             {/* Micro layout details */}
             <div className="pt-8 flex items-center gap-3 text-xs text-[#5E6573]/80 border-t border-[#F3F2EE] mt-6">
-              <span className="font-bold tracking-widest text-[#0B1F3A] uppercase">BARTI Initiative</span>
+              <span className="font-serif font-black tracking-widest text-[#0B1F3A] uppercase">BARTI Initiative</span>
               <span className="w-1 h-1 rounded-full bg-[#C89B3C]" />
               <span>Preserving Knowledge</span>
             </div>
@@ -68,7 +68,7 @@ export function ObjectivesSection() {
                   <div className="space-y-2">
                     <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#C89B3C] block mb-1">01 / SYSTEM GOALS</span>
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight">
-                      For BARTI Operations
+                      For <span className="font-serif font-black">BARTI</span> Operations
                     </h3>
                     <p className="text-xs text-[#5E6573] leading-relaxed">
                       Optimizing administrative oversight, asset protection, and operational logistics.

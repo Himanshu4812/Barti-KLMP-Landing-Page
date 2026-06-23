@@ -43,7 +43,6 @@ import { WhyChooseSection } from "@/components/why-choose-section";
 import { DiscoverySection } from "@/components/discovery-section";
 import { BenefitsBartiSection } from "@/components/benefits-barti-section";
 import { StatsSection } from "@/components/stats-section";
-import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -59,7 +58,6 @@ export default function Home() {
       <DiscoverySection />
       <BenefitsBartiSection />
       <StatsSection />
-      <CTASection />
       <Footer />
     </>
   );

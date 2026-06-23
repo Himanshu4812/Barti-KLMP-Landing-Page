@@ -66,13 +66,13 @@ export function WhyChooseSection() {
               >
                 {/* Dynamic Background Image */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-100 scale-100 lg:opacity-0 lg:scale-105 lg:group-hover:opacity-100 lg:group-hover:scale-100 transition-all duration-700 ease-out pointer-events-none z-0"
+                  className="absolute inset-0 bg-cover bg-center opacity-100 scale-100 lg:opacity-0 lg:scale-105 lg:group-hover:opacity-60 lg:group-hover:scale-100 transition-all duration-700 ease-out pointer-events-none z-0"
                   style={{ backgroundImage: `url(${CARD_IMAGES[index]})` }}
                 />
 
                 {/* Dark Gradient Overlay */}
                 <div 
-                  className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/20 via-[#0B1F3A]/45 to-[#0B1F3A]/65 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
+                  className="absolute inset-0 bg-gradient-to-b from-[#0B1F3A]/40 via-[#0B1F3A]/65 to-[#0B1F3A]/80 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"
                 />
 
                 {/* Content Container (elevated above background) */}
@@ -83,10 +83,10 @@ export function WhyChooseSection() {
                   </span>
 
                   <div className="space-y-2">
-                    <h3 className="text-lg font-bold text-[#C89B3C] lg:text-[#0B1F3A] tracking-tight lg:group-hover:text-[#C89B3C] transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-[#C89B3C] lg:text-[#0B1F3A] tracking-tight lg:group-hover:text-white transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <p className="text-xs text-slate-200/90 lg:text-[#5E6573] lg:group-hover:text-slate-200/90 leading-relaxed transition-colors duration-300">
+                    <p className="text-xs text-slate-200/90 lg:text-[#5E6573] lg:group-hover:text-white/90 leading-relaxed transition-colors duration-300">
                       {card.description}
                     </p>
                   </div>

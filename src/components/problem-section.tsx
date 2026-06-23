@@ -207,7 +207,7 @@ export function ProblemSection() {
                   The Problem We Are Solving
                 </h2>
                 <p className="text-sm md:text-base text-[#4A515E] max-w-2xl mx-auto leading-relaxed">
-                  BARTI maintains a large collection of books accessed by students, researchers, scholars, government officers and citizens — but current operations face critical bottlenecks.
+                  <span className="font-serif font-black">BARTI</span> maintains a large collection of books accessed by students, researchers, scholars, government officers and citizens — but current operations face critical bottlenecks.
                 </p>
               </div>
             </Container>
@@ -247,7 +247,7 @@ export function ProblemSection() {
               The Problem We Are Solving
             </h2>
             <p className="text-xs sm:text-sm text-[#4A515E] leading-relaxed">
-              BARTI maintains a large collection of books accessed by students, researchers, scholars, government officers and citizens — but current operations face critical bottlenecks.
+              <span className="font-serif font-black">BARTI</span> maintains a large collection of books accessed by students, researchers, scholars, government officers and citizens — but current operations face critical bottlenecks.
             </p>
           </div>
           

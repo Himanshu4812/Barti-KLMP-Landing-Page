@@ -43,7 +43,7 @@ export function WhyThisMattersSection() {
           {/* Right Column - Mission statement */}
           <div className="lg:col-span-7 pt-2 lg:pt-6">
             <p className="text-xl md:text-2xl font-serif text-[#0B1F3A] leading-relaxed italic max-w-[660px]">
-              BARTI KLMP brings together vast intellectual resources, research, and literature on social justice, equality, and empowerment — making them accessible to every seeker of knowledge.
+              <span className="font-serif font-black">BARTI KLMP</span> brings together vast intellectual resources, research, and literature on social justice, equality, and empowerment — making them accessible to every seeker of knowledge.
             </p>
           </div>
         </motion.div>

@@ -140,7 +140,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-white/70 leading-relaxed max-w-sm font-sans">
-              BARTI Knowledge &amp; Library Management Platform (KLMP) is a state-of-the-art digital repository preserving Maharashtra&apos;s rich intellectual heritage, including Ambedkarite literature, constitutional studies, and social justice archives.
+              <span className="font-serif font-black">BARTI</span> Knowledge &amp; Library Management Platform (KLMP) is a state-of-the-art digital repository preserving Maharashtra&apos;s rich intellectual heritage, including Ambedkarite literature, constitutional studies, and social justice archives.
             </p>
 
             {/* Follow Us Section */}
@@ -166,36 +166,7 @@ export function Footer() {
           </div>
 
           {/* Subgrid of 3 Columns (Right) */}
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12">
-            
-            {/* Column 1: Our Modules */}
-            <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-[#C89B3C] border-b border-white/10 pb-2 font-sans">
-                Our Modules
-              </h4>
-              <ul className="space-y-2.5 text-sm text-white/70 font-sans">
-                <li>
-                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
-                    Library Operations
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
-                    Digital Repository
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
-                    Smart Discovery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#C89B3C] transition-colors">
-                    AI Intelligence
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
 
             {/* Column 2: Resources / Company */}
             <div className="space-y-4">
@@ -250,12 +221,12 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left font-sans">
-            <span>&copy; {currentYear} BARTI KLMP. All rights reserved.</span>
+            <span>&copy; {currentYear} <span className="font-serif font-black">BARTI KLMP</span>. All rights reserved.</span>
             <span className="hidden md:inline text-white/20">|</span>
             <span>
               Commissioned for{" "}
               <span className="text-[#C89B3C] font-semibold">
-                Dr. Babasaheb Ambedkar Research &amp; Training Institute (BARTI), Pune
+                Dr. Babasaheb Ambedkar Research &amp; Training Institute <span className="font-serif font-black">(BARTI)</span>, Pune
               </span>
             </span>
           </div>
