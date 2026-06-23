@@ -54,7 +54,7 @@ export function Navbar() {
             onClick={() => document.documentElement.scrollTop = 0}
             className="flex items-center gap-3 group shrink-0"
           >
-            {/* Detailed Circular Golden Crest SVG representing BARTI logo */}
+            {/* Detailed Circular Golden Crest SVG representing institutional logo */}
             <div
               className={cn(
                 "relative flex-shrink-0 transition-all duration-500",
@@ -81,11 +81,11 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               <span
                 className={cn(
-                  "font-serif font-black tracking-tight text-[#0B1F3A] uppercase transition-all duration-500",
+                  "font-heading font-black tracking-tight text-[#0B1F3A] uppercase transition-all duration-500",
                   scrolled ? "text-xl" : "text-2xl"
                 )}
               >
-                BARTI
+                KLMP
               </span>
               <div className="w-[1px] h-4 bg-[#E4E7EC] hidden sm:block" />
               <div className="flex flex-col">

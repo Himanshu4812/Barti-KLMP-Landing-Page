@@ -66,7 +66,7 @@ export const CHALLENGES = {
 
 export const OBJECTIVES = {
   vision: "To create Maharashtra's most comprehensive digital knowledge management platform for Ambedkarite literature, social justice studies, constitutional studies and public knowledge resources.",
-  forBarti: [
+  forInstitutions: [
     "Digitize complete library operations",
     "Maintain accurate inventory",
     "Generate management reports",
@@ -153,7 +153,7 @@ export const FEATURES_HIGHLIGHT = {
 };
 
 export const WHY_CHOOSE = {
-  title: "Why Choose KLMP for BARTI?",
+  title: "Why Choose KLMP?",
   cards: [
     {
       title: "Built for Government Institutions",
@@ -225,7 +225,7 @@ export const CAPABILITIES = {
       title: "AI Intelligence",
       description: "AI-powered knowledge assistant providing recommendations, insights, and intelligent search capabilities.",
       features: [
-        "Ask BARTI Assistant",
+        "AI Knowledge Assistant",
         "Smart Recommendations",
         "Reading Insights",
         "Trend Detection",
@@ -271,9 +271,9 @@ export const ORGANIZATIONS = {
   ] as const,
 };
 
-export const BENEFITS_BARTI = {
-  title: "Benefits for BARTI & Readers",
-  forBarti: [
+export const BENEFITS = {
+  title: "Benefits for All",
+  forInstitutions: [
     "Accurate inventory tracking across all collections",
     "Automated issue and return workflows",
     "Data-driven analytics and operational reporting",
@@ -299,7 +299,7 @@ export const STATS = {
 };
 
 export const CTA = {
-  headline: "Let\u2019s Transform BARTI\u2019s Library Together",
+  headline: "Let\u2019s Transform Your Library Together",
   subheadline:
     "Digitize operations, improve accessibility and create Maharashtra\u2019s most comprehensive digital knowledge ecosystem.",
   primaryCta: "Request Walkthrough",
@@ -347,7 +347,7 @@ export const FOOTER = {
     {
       title: "Contact",
       links: [
-        { label: "BARTI Headquarters", href: "#" },
+        { label: "Head Office", href: "#" },
         { label: "Email Us", href: "#" },
         { label: "Request Demo", href: "#cta" },
         { label: "Support Portal", href: "#" },

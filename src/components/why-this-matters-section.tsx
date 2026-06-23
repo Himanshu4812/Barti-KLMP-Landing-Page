@@ -36,14 +36,14 @@ export function WhyThisMattersSection() {
             <h2 className="section-heading-custom text-[#0B1F3A] leading-[1.1] tracking-tight">
               Knowledge is the <br className="hidden lg:inline" />
               foundation of <br />
-              <span className="italic text-[#C89B3C] font-serif font-normal text-heading">Social Transformation.</span>
+              <span className="italic text-[#C89B3C] font-heading font-normal text-heading">Social Transformation.</span>
             </h2>
           </div>
 
           {/* Right Column - Mission statement */}
           <div className="lg:col-span-7 pt-2 lg:pt-6">
-            <p className="text-xl md:text-2xl font-serif text-[#0B1F3A] leading-relaxed italic max-w-[660px]">
-              <span className="font-serif font-black">BARTI KLMP</span> brings together vast intellectual resources, research, and literature on social justice, equality, and empowerment — making them accessible to every seeker of knowledge.
+            <p className="text-xl md:text-2xl font-heading text-[#0B1F3A] leading-relaxed italic max-w-[660px]">
+              <span className="font-heading font-black">KLMP</span> brings together vast intellectual resources, research, and literature on social justice, equality, and empowerment — making them accessible to every seeker of knowledge.
             </p>
           </div>
         </motion.div>

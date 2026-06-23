@@ -93,7 +93,7 @@ export function HomePage() {
                     className="flex flex-col items-center justify-center"
                   >
                     <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] mb-2">
-                      <span className="font-serif font-black">BARTI</span> KLMP
+                      <span className="font-heading font-black">KLMP</span>
                     </span>
                     <h2 className="text-xl font-extrabold text-[#0B1F3A] tracking-tight leading-snug mb-2">
                       Core Feature Highlights

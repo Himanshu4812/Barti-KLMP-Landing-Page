@@ -107,7 +107,7 @@ export function Footer() {
           {/* Brand Logo & Description Column (Left) */}
           <div className="lg:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
-              {/* Detailed Circular Golden Crest SVG representing BARTI logo */}
+              {/* Detailed Circular Golden Crest SVG representing institutional logo */}
               <div className="relative w-12 h-12 flex-shrink-0">
                 <svg viewBox="0 0 100 100" className="w-full h-full text-[#C89B3C]">
                   {/* Outer Ring */}
@@ -124,8 +124,8 @@ export function Footer() {
 
               {/* Logo Text */}
               <div className="flex items-center gap-2">
-                <span className="font-serif font-black tracking-tight text-white uppercase text-2xl">
-                  BARTI
+                <span className="font-heading font-black tracking-tight text-white uppercase text-2xl">
+                  KLMP
                 </span>
                 <div className="w-[1px] h-4 bg-white/20" />
                 <div className="flex flex-col">
@@ -140,7 +140,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-white/70 leading-relaxed max-w-sm font-sans">
-              <span className="font-serif font-black">BARTI</span> Knowledge &amp; Library Management Platform (KLMP) is a state-of-the-art digital repository preserving Maharashtra&apos;s rich intellectual heritage, including Ambedkarite literature, constitutional studies, and social justice archives.
+              <strong>Knowledge &amp; Library Management Platform (KLMP)</strong> &nbsp;is a state-of-the-art digital repository preserving Maharashtra&apos;s rich intellectual heritage, including Ambedkarite literature, constitutional studies, and social justice archives.
             </p>
 
             {/* Follow Us Section */}
@@ -221,12 +221,12 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left font-sans">
-            <span>&copy; {currentYear} <span className="font-serif font-black">BARTI KLMP</span>. All rights reserved.</span>
+            <span>&copy; {currentYear} <span className="font-heading font-black">KLMP</span>. All rights reserved.</span>
             <span className="hidden md:inline text-white/20">|</span>
             <span>
               Commissioned for{" "}
               <span className="text-[#C89B3C] font-semibold">
-                Dr. Babasaheb Ambedkar Research &amp; Training Institute <span className="font-serif font-black">(BARTI)</span>, Pune
+                Dr. Babasaheb Ambedkar Research &amp; Training Institute <span className="font-heading font-black">(BARTI)</span>, Pune
               </span>
             </span>
           </div>

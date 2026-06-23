@@ -1,7 +1,7 @@
-# BARTI Knowledge & Library Management Platform
+# Knowledge & Library Management Platform
 
 <p align="center">
-  <img src="public/images/feature/Smart%20Book%20Discovery.jpg" alt="BARTI KLMP Platform Screenshot" width="800" />
+  <img src="public/images/feature/Smart%20Book%20Discovery.jpg" alt="KLMP Platform Screenshot" width="800" />
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
   <img src="https://img.shields.io/badge/License-Proprietary-0B1F3A?style=for-the-badge" alt="License: Proprietary" />
 </p>
 
-A modern, institutional-grade web platform for the **BARTI Knowledge & Library Management Platform (KLMP)** — designed to digitize, preserve, organize and democratize access to Ambedkarite literature, constitutional studies, social justice resources and public knowledge archives.
+A modern, institutional-grade web platform for the **Knowledge & Library Management Platform (KLMP)** — designed to digitize, preserve, organize and democratize access to Ambedkarite literature, constitutional studies, social justice resources and public knowledge archives.
 
 Built for **Dr. Babasaheb Ambedkar Research and Training Institute (BARTI)**, Government of Maharashtra.
 
@@ -25,7 +25,7 @@ Built for **Dr. Babasaheb Ambedkar Research and Training Institute (BARTI)**, Go
 
 **Mission:** Preserve Maharashtra's knowledge heritage and make it accessible to every citizen.
 
-**Target Audience:** BARTI Leadership, Government Officers, Researchers, Scholars, Students, Librarians, Public Readers
+**Target Audience:** Government Officers, Researchers, Scholars, Students, Librarians, Public Readers
 
 **Emotional Response:** "This platform protects knowledge and makes it accessible to everyone."
 
@@ -142,7 +142,7 @@ barti-klmp/
 │   │   ├── modules-section.tsx        # 4 capability cards with feature mockups
 │   │   ├── why-choose-section.tsx     # 6 value proposition cards
 │   │   ├── discovery-section.tsx      # 6-category knowledge discovery grid
-│   │   ├── benefits-barti-section.tsx # Org cards + benefits card
+│   │   ├── benefits-section.tsx # Org cards + benefits card
 │   │   ├── stats-section.tsx          # 4 impact metrics
 │   │   ├── section-heading.tsx        # Reusable animated heading
 │   │   ├── section-wrapper.tsx        # Consistent section padding
@@ -178,9 +178,9 @@ The page follows a mandatory section order defined in `src/app/page.tsx`:
 | 4 | **Problem / Challenges** | `#challenges` | 3 equal-height cards: Operational Gaps, Reader Experience, Management Blind Spots |
 | 5 | **Objectives / Transformation Journey** | `#objectives` | 3-stage horizontal flow: Traditional Library → Digital Repository → Knowledge Intelligence |
 | 6 | **Core Platform Capabilities** | `#capabilities` | 4-column grid: Library Operations, Digital Repository, Knowledge Discovery, AI Intelligence — each with interactive UI mockup |
-| 7 | **Why Choose BARTI KLMP** | `#why-choose` | 6 value proposition cards: AI Intelligence, Ambedkar Heritage, Citizen Access, Data-Driven Decisions, Government Institution, Scalable Network |
+| 7 | **Why Choose KLMP** | `#why-choose` | 6 value proposition cards: AI Intelligence, Ambedkar Heritage, Citizen Access, Data-Driven Decisions, Government Institution, Scalable Network |
 | 8 | **Knowledge Discovery** | `#discovery` | 3x2 grid of 6 knowledge categories (Google Books aesthetic) with background images |
-| 9 | **Benefits for BARTI & Readers** | `#benefits` | Two-column: 4 organization-type cards + benefits card with checklist |
+| 9 | **Benefits for All** | `#benefits` | Two-column: 4 organization-type cards + benefits card with checklist |
 | 10 | **Platform Impact** | — | 4 large statistics with gold metrics (books, members, availability, uptime) |
 | 11 | **CTA** | `#cta` | Join the Movement section with primary action button |
 | 12 | **Footer** | — | 5-column layout: Platform, Collections, Resources, Government, Contact |
@@ -312,4 +312,4 @@ Deploy by linking your Netlify project to the repository — the build settings 
 
 ## License
 
-Proprietary — BARTI (Dr. Babasaheb Ambedkar Research and Training Institute), Government of Maharashtra.
+Proprietary — Dr. Babasaheb Ambedkar Research and Training Institute, Government of Maharashtra.

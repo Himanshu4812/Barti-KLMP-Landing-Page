@@ -17,11 +17,10 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "BARTI Knowledge & Library Management Platform",
+  title: "Knowledge & Library Management Platform",
   description:
     "A modern Knowledge & Library Management Platform designed to preserve, manage and democratize access to Ambedkarite literature, constitutional studies, social justice resources and public knowledge archives.",
   keywords: [
-    "BARTI",
     "Library Management",
     "Knowledge Platform",
     "Ambedkarite Literature",

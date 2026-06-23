@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { staggerContainer, cardItem, fadeUp } from "@/lib/animations";
 
-export function BenefitsBartiSection() {
+export function BenefitsSection() {
   return (
     <section id="benefits" className="bg-[#F3F2EE] py-16 md:py-20 relative overflow-hidden ">
       <Container>
@@ -64,7 +64,7 @@ export function BenefitsBartiSection() {
             </motion.div>
           </div>
 
-          {/* Right Column - Benefits for BARTI & Readers */}
+          {/* Right Column - Benefits for All */}
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -87,7 +87,7 @@ export function BenefitsBartiSection() {
 
             <div className="relative z-10 space-y-6">
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C] block">
-                BENEFITS FOR <span className="font-serif font-black">BARTI</span> &amp; READERS —
+                BENEFITS FOR INSTITUTIONS &amp; READERS —
               </span>
 
               <ul className="space-y-4 pt-1">

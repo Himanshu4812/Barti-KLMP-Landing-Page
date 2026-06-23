@@ -197,7 +197,7 @@ function AIIntelligenceMockup() {
           <span className="w-2 h-2 rounded-full bg-white/20" />
           <span className="w-2 h-2 rounded-full bg-white/20" />
           <span className="w-2 h-2 rounded-full bg-white/20" />
-          <span className="text-white/80 ml-2 font-sans font-bold">BARTI_ASSISTANT_AI</span>
+          <span className="text-white/80 ml-2 font-sans font-bold">AI_KNOWLEDGE_ASSISTANT</span>
         </div>
         <span className="text-[6.5px] font-mono tracking-widest animate-pulse text-purple-200">ACTIVE</span>
       </div>
@@ -232,7 +232,7 @@ function AIIntelligenceMockup() {
         <div className="relative mt-1 border-t border-[#E4E7EC]/40 pt-1.5">
           <input 
             type="text" 
-            placeholder="Type query to Ask BARTI..." 
+            placeholder="Type query to ask AI..." 
             className="w-full bg-[#FAFAF8] border border-[#E4E7EC] rounded pl-2 pr-6 py-1 text-[7.5px] focus:outline-none"
             readOnly
           />
@@ -247,7 +247,7 @@ const MOCKUP_TABS = [
   { id: "ops", label: "Library Operations", component: LibraryOperationsMockup, desc: "Barcode cataloging, real-time inventory adjustments, and loan processing dashboards." },
   { id: "repo", label: "Digital Repository", component: DigitalRepositoryMockup, desc: "Online document preservation engine supporting upload, synchronization, and secure browsing." },
   { id: "discovery", label: "Faceted Discovery", component: KnowledgeDiscoveryMockup, desc: "Faceted filtering across categories, author directories, and historic subject tags." },
-  { id: "ai", label: "AI Knowledge Assistant", component: AIIntelligenceMockup, desc: "Ask BARTI conversational engine retrieving contextually accurate excerpts from Ambedkarite volumes." }
+  { id: "ai", label: "AI Knowledge Assistant", component: AIIntelligenceMockup, desc: "Conversational AI knowledge engine retrieving contextually accurate excerpts from Ambedkarite volumes." }
 ];
 
 export function FeaturesSection() {
@@ -339,7 +339,7 @@ export function FeaturesSection() {
                   </h3>
                   
                   <p className="text-xs text-[#5E6573] leading-relaxed">
-                    Toggle through the tabs below to preview the live interface layouts designed specifically for BARTI administrative officers.
+                    Toggle through the tabs below to preview the live interface layouts designed specifically for administrative officers.
                   </p>
                 </div>
 

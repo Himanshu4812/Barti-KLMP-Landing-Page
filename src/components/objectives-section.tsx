@@ -33,23 +33,23 @@ export function ObjectivesSection() {
                 <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C89B3C]">
                   OUR VISION —
                 </span>
-                <span className="text-5xl font-serif text-[#C89B3C]/20 leading-none select-none font-bold">
+                <span className="text-5xl font-heading text-[#C89B3C]/20 leading-none select-none font-bold">
                   “
                 </span>
               </div>
 
-              <h2 className="text-2xl md:text-3xl font-serif text-[#0B1F3A] leading-tight font-bold tracking-tight">
+              <h2 className="text-2xl md:text-3xl font-heading text-[#0B1F3A] leading-tight font-bold tracking-tight">
                 Maharashtra’s Digital Knowledge Gateway
               </h2>
 
-              <p className="text-base md:text-[18px] font-serif text-[#4A515E] leading-relaxed italic border-l-2 border-[#C89B3C] pl-4 pt-1">
+              <p className="text-base md:text-[18px] font-heading text-[#4A515E] leading-relaxed italic border-l-2 border-[#C89B3C] pl-4 pt-1">
                 "{OBJECTIVES.vision}"
               </p>
             </div>
 
             {/* Micro layout details */}
             <div className="pt-8 flex items-center gap-3 text-xs text-[#5E6573]/80 border-t border-[#F3F2EE] mt-6">
-              <span className="font-serif font-black tracking-widest text-[#0B1F3A] uppercase">BARTI Initiative</span>
+              <span className="font-heading font-black tracking-widest text-[#0B1F3A] uppercase">Knowledge Initiative</span>
               <span className="w-1 h-1 rounded-full bg-[#C89B3C]" />
               <span>Preserving Knowledge</span>
             </div>
@@ -66,9 +66,9 @@ export function ObjectivesSection() {
               >
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#C89B3C] block mb-1">01 / SYSTEM GOALS</span>
+                    <span className="text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-[#C89B3C] block mb-1">01 / SYSTEM GOALS</span>
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight">
-                      For <span className="font-serif font-black">BARTI</span> Operations
+                      For Institutional Operations
                     </h3>
                     <p className="text-xs text-[#5E6573] leading-relaxed">
                       Optimizing administrative oversight, asset protection, and operational logistics.
@@ -76,7 +76,7 @@ export function ObjectivesSection() {
                   </div>
 
                   <ul className="space-y-3.5 pt-2">
-                    {OBJECTIVES.forBarti.map((item) => (
+                    {OBJECTIVES.forInstitutions.map((item) => (
                       <li key={item} className="flex items-start text-xs text-[#4A515E] leading-relaxed font-semibold">
                         <span className="text-[#C89B3C] font-bold select-none mr-3 flex-shrink-0">—</span>
                         <span>{item}</span>
@@ -93,7 +93,7 @@ export function ObjectivesSection() {
               >
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <span className="text-[10px] font-serif font-bold uppercase tracking-[0.2em] text-[#0D9488] block mb-1">02 / CITIZEN SERVICES</span>
+                    <span className="text-[10px] font-heading font-bold uppercase tracking-[0.2em] text-[#0D9488] block mb-1">02 / CITIZEN SERVICES</span>
                     <h3 className="text-lg font-bold text-[#0B1F3A] tracking-tight">
                       For Readers &amp; Scholars
                     </h3>

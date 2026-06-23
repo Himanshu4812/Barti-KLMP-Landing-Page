@@ -41,7 +41,7 @@ import { ObjectivesSection } from "@/components/objectives-section";
 import { FeaturesSection } from "@/components/modules-section";
 import { WhyChooseSection } from "@/components/why-choose-section";
 import { DiscoverySection } from "@/components/discovery-section";
-import { BenefitsBartiSection } from "@/components/benefits-barti-section";
+import { BenefitsSection } from "@/components/benefits-section";
 import { StatsSection } from "@/components/stats-section";
 import { Footer } from "@/components/footer";
 
@@ -56,7 +56,7 @@ export default function Home() {
       <FeaturesSection />
       <WhyChooseSection />
       <DiscoverySection />
-      <BenefitsBartiSection />
+      <BenefitsSection />
       <StatsSection />
       <Footer />
     </>

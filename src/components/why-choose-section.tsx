@@ -78,7 +78,7 @@ export function WhyChooseSection() {
                 {/* Content Container (elevated above background) */}
                 <div className="relative z-20 space-y-4 flex flex-col justify-between h-full w-full">
                   {/* Serif Typographic Index */}
-                  <span className="text-2xl font-serif font-bold text-white lg:text-[#C89B3C] block select-none lg:group-hover:text-white transition-colors duration-300">
+                  <span className="text-2xl font-heading font-bold text-white lg:text-[#C89B3C] block select-none lg:group-hover:text-white transition-colors duration-300">
                     {numStr}
                   </span>
 

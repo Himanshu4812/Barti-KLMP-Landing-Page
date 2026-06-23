@@ -61,14 +61,14 @@ export function Hero() {
             {/* Headline */}
             <h1 className="hero-heading text-[#0B1F3A] leading-[0.95] tracking-tight">
               <span className="whitespace-nowrap">
-                <span className="font-serif font-black">BARTI</span>{" "}
-                <span className="italic text-[#C89B3C] font-serif font-normal">
-                  Knowledge
+                <span className="font-heading font-black">Knowledge</span>
+                <span className="italic text-[#C89B3C] font-heading font-normal">
+                  {" "}&amp;
                 </span>
               </span>
               <br />
               <span className="whitespace-nowrap">
-                &amp; Library Management
+                <span className="font-heading font-black">Library</span> Management
               </span>
               <br />
               Platform
